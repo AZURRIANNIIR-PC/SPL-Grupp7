@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7eaafe5f218c424eb6fb696412db52b
+guid: 2c9d572b113804c2fa9763abdf295dbf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,316 +129,358 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_0
+      name: Desert_Fauna_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 0
-        width: 23
-        height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af76f3e07688e4bb6a87a30f3afba27c
-      internalID: 1330253992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 1
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99ffa54e26f25433794c9e49997e6086
-      internalID: -579417243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 2
-        width: 37
-        height: 36
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 426ec564c6c684fe1945f11ab1551d1a
-      internalID: 445583534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 1
-        width: 45
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82530e63729de465abd7a5c5200c8e80
-      internalID: -1946613497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 39
-        width: 16
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79c4b35fc92b14c6c90f8efce2462da2
-      internalID: 1213574597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 185
-        y: 40
-        width: 12
+        x: 1
+        y: 35
+        width: 8
         height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37c607daa81ba453ba982fa1f4119d82
-      internalID: 852683429
+      spriteID: 60e660e587d2f41d284d97f8f6f8544f
+      internalID: 1057447267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_6
+      name: Desert_Fauna_1
       rect:
         serializedVersion: 2
-        x: 181
-        y: 40
+        x: 10
+        y: 27
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b231654783ded452db877d5c7bcbb098
+      internalID: 1395653161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Fauna_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 19
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2458c5e516ad64c3c91214c56a452631
+      internalID: 1619436961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Fauna_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 19
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51fa03d1632842eaad0322a633e8e2e
+      internalID: 1006347670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Fauna_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 26
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5322c174db64794b1749642875e342
+      internalID: 508608664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Fauna_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 17
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63eb3186f82045c0a110ea600259731
+      internalID: -1105632556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Fauna_6
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 18
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a296bd28bfbc0463b94a0e1702a5ce8c
+      internalID: 1150954918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Fauna_7
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 18
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340053e483122493d903d0b07cfcc529
+      internalID: 1600007217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desert_Fauna_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 10
         width: 16
         height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 338e8c8d358174e4db002c3cddfa162d
-      internalID: -617980824
+      spriteID: f2c3eadd9d7df45579653ebfaad21957
+      internalID: 2116114187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_7
+      name: Desert_Fauna_9
       rect:
         serializedVersion: 2
-        x: 289
-        y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 52
+        y: 10
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2414ffb9452454377a69d2851efdb911
-      internalID: 1684722108
+      spriteID: 911f36499eff44cbd95b1fe9152f1006
+      internalID: 97732860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_8
+      name: Desert_Fauna_10
       rect:
         serializedVersion: 2
-        x: 337
-        y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 61
+        y: 10
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29c375a2ccf3a471d80c81089545a9d2
-      internalID: -1125191074
+      spriteID: 1af23c0ecf8dc4b9e95cc63fd4ad008e
+      internalID: 1398354666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_9
+      name: Desert_Fauna_11
       rect:
         serializedVersion: 2
-        x: 385
-        y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 70
+        y: 10
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b1104fa97e124078a568c1f042f744f
-      internalID: 2096790017
+      spriteID: 701c6050e983c4f289be283d99e7faf2
+      internalID: -346033956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_10
+      name: Desert_Fauna_12
       rect:
         serializedVersion: 2
-        x: 433
-        y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 79
+        y: 10
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cac52f00525e4c96a2cfabca5dd4837
-      internalID: 1420934145
+      spriteID: 7a4cb0eef5c164aca98b7e65b7b1cbae
+      internalID: 103328781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_11
+      name: Desert_Fauna_13
       rect:
         serializedVersion: 2
-        x: 481
-        y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 52
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e0568f37985c4fd283fc171f2c41fe2
-      internalID: 152044933
+      spriteID: 886bf40c66db64c10a57ebe8cef106ef
+      internalID: -585373838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_12
+      name: Desert_Fauna_14
       rect:
         serializedVersion: 2
-        x: 529
-        y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 61
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6de7d3805239844289a5bf8c6a5d4f62
-      internalID: 643659357
+      spriteID: 840ed23d5157141e59ba0505d26632f8
+      internalID: 1306821425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_13
+      name: Desert_Fauna_15
       rect:
         serializedVersion: 2
-        x: 193
-        y: 0
-        width: 46
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 70
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67fab3860f44d403ca5d9184a2823bfa
-      internalID: 2012524408
+      spriteID: 3863cd40722714b349259b17217532ed
+      internalID: 532396438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_14
+      name: Desert_Fauna_16
       rect:
         serializedVersion: 2
-        x: 241
-        y: 0
-        width: 41
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 79
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cecaed1f4d184467b7df3635f3bae96
-      internalID: -1062737868
+      spriteID: 8917d57cc920f470a9dec07d64caef7d
+      internalID: 136327344
       vertices: []
       indices: 
       edges: []
@@ -454,21 +496,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DeathSpartan-Sheet_0: 1330253992
-      DeathSpartan-Sheet_1: -579417243
-      DeathSpartan-Sheet_10: 1420934145
-      DeathSpartan-Sheet_11: 152044933
-      DeathSpartan-Sheet_12: 643659357
-      DeathSpartan-Sheet_13: 2012524408
-      DeathSpartan-Sheet_14: -1062737868
-      DeathSpartan-Sheet_2: 445583534
-      DeathSpartan-Sheet_3: -1946613497
-      DeathSpartan-Sheet_4: 1213574597
-      DeathSpartan-Sheet_5: 852683429
-      DeathSpartan-Sheet_6: -617980824
-      DeathSpartan-Sheet_7: 1684722108
-      DeathSpartan-Sheet_8: -1125191074
-      DeathSpartan-Sheet_9: 2096790017
+      Desert_Fauna_0: 1057447267
+      Desert_Fauna_1: 1395653161
+      Desert_Fauna_10: 1398354666
+      Desert_Fauna_11: -346033956
+      Desert_Fauna_12: 103328781
+      Desert_Fauna_13: -585373838
+      Desert_Fauna_14: 1306821425
+      Desert_Fauna_15: 532396438
+      Desert_Fauna_16: 136327344
+      Desert_Fauna_2: 1619436961
+      Desert_Fauna_3: 1006347670
+      Desert_Fauna_4: 508608664
+      Desert_Fauna_5: -1105632556
+      Desert_Fauna_6: 1150954918
+      Desert_Fauna_7: 1600007217
+      Desert_Fauna_8: 2116114187
+      Desert_Fauna_9: 97732860
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
