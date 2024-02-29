@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class EnemyState : MonoBehaviour
 {
     [SerializeField] private int health = 6;
 
@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("I am Dead!");
+        Debug.Log("Enemy is dead!");
         Destroy(gameObject);
     }
 }

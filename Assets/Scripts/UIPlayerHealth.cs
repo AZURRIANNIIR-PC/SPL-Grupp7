@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class UIPlayerHealth : MonoBehaviour
 {
-    //temporärt bortkommenterat pga har playerstate script
-    //public PlayerState playerState;
+    public PlayerState playerState;
 
     private Slider slider;
 
@@ -15,7 +14,7 @@ public class UIPlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //maxPlayerHealthPoints = playerState.initialHealthPoints;
+        maxPlayerHealthPoints = playerState.initialHealthPoints;
         slider = gameObject.GetComponent<Slider>();
         slider.wholeNumbers = true;
         slider.maxValue= maxPlayerHealthPoints;
@@ -24,6 +23,6 @@ public class UIPlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //slider.value= playerState.healthPoints;
+        slider.value= playerState.healthPoints;
     }
 }
