@@ -26,7 +26,7 @@ public class Settings_Controller : MonoBehaviour {
         settingsPanel.SetActive(true); //Gör settingsPanel synlig
 
         //Stäng av spelarens kontroller (att kunna röra gubben)
-        //playerMovement.enabled = false; 
+        playerMovement.enabled = false; 
     }
 
     public void CloseSetting() {
@@ -34,6 +34,6 @@ public class Settings_Controller : MonoBehaviour {
         settingsPanel.SetActive(false);//Gör settingsPanel osynlig
 
         //Aktivera spelarens kontroller:
-        //playerMovement.enabled = true; 
+        playerMovement.enabled = true; 
     }
 }
