@@ -1,0 +1,40 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerState : MonoBehaviour
+{
+    public int healthPoints = 6;
+    public int initialHealthPoints = 6;
+
+    private Animator animator;
+    public bool isDead = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        healthPoints = initialHealthPoints;
+
+        animator = gameObject.GetComponent<Animator>();
+    }
+
+    public void doHarm(int doDamageByThisMuch)
+    {
+        healthPoints -= doDamageByThisMuch;
+
+        if (healthPoints <= 0)
+        {
+            isDead = true; //beh�vs egentligen inte rn, men kan beh�lla variabeln f�r ifall jag tex vill g�ra s� att spelaren inte ska kunna g� d� etc
+            //animator.SetTrigger("isDead");
+            //Invoke("stopDeathAnimation", 1f);
+            ////respawn();
+            Debug.Log("Player is dead!");
+            Destroy(gameObject);
+        }
+        else
+        {
+            //animator.SetTrigger("isHurt");
+            //Invoke("stopHurtAnimation", 0.4f);
+        }
+    }
+}

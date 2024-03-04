@@ -13,10 +13,21 @@ public class Player_Movement : MonoBehaviour {
     private bool isGrounded;
     private bool isFacingRight = true;
 
+    //attackera
+    //private GameObject AttackArea = default;
+    private AttackArea attackArea;
+    public bool attacking = false;
+    private float timeToAttack = 0.73f;
+    private float timer = 0;
+
     // Start is called before the first frame update
     private void Start() {
         rb = GetComponent<Rigidbody2D>(); //Hämtar referens till spelarens rigidbody
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
+
+        //AttackArea = transform.GetChild(0).gameObject;
+        attackArea = gameObject.GetComponentInChildren<AttackArea>();
+        attackArea.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,6 +50,24 @@ public class Player_Movement : MonoBehaviour {
         } else if (moveInput < 0 && isFacingRight){
             Flip();
         }
+
+        //Attackera
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
+
+        if (attacking == true)
+        {
+            timer += Time.deltaTime;
+            if(timer >= timeToAttack)
+            {
+                timer = 0;
+                attacking = false;
+                attackArea.gameObject.SetActive(attacking);
+            }
+
+        }
     }
 
     private void Flip() { //Vänder på spelarens sprite
@@ -46,5 +75,18 @@ public class Player_Movement : MonoBehaviour {
         Vector3 scale = transform.localScale;
         scale.x *= -1; //Inverterar x-skalan för att vända sprite horisontellt
         transform.localScale = scale;
+    }
+
+    private void Attack()
+    {
+        attacking = true;
+        animator.SetTrigger("DoAttack"); //sätter igång animationen - är en trigger, inte en bool etc
+        Invoke("enableAttackArea", 0.3f);
+    }
+
+    public void enableAttackArea()
+    {
+        attackArea.gameObject.SetActive(attacking);
+        //enablear attack area efter en liten stund så det timear med att animation hinner tr�ffa fienden
     }
 }
