@@ -7,6 +7,7 @@ public class KitharaObject : MonoBehaviour
     GameObject kitharaCloseUp;
     //GameObject kitharaObject;
     [SerializeField] GameObject kitharaText;
+    private bool inCollder = false;
     private bool closeUpActivated = false;
 
     // Start is called before the first frame update
@@ -14,6 +15,7 @@ public class KitharaObject : MonoBehaviour
     {
         kitharaCloseUp = GameObject.FindWithTag("KitharaCloseUp");
         //kitharaObject = GameObject.FindWithTag("KitharaObject");
+        closeUpActivated = false;
 
         kitharaCloseUp.SetActive(false);
         //kitharaObject.SetActive(false);
@@ -23,7 +25,24 @@ public class KitharaObject : MonoBehaviour
 
     private void Update()
     {
-        
+        if(inCollder == true && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("In press, before if");
+            if (closeUpActivated == false)
+            {
+                kitharaCloseUp.SetActive(true);
+                closeUpActivated = true;
+                Debug.Log("Pressed to set active");
+                Debug.Log(kitharaCloseUp.activeSelf);
+            }
+            else if (closeUpActivated == true)
+            {
+                kitharaCloseUp.SetActive(false);
+                closeUpActivated = false;
+                Debug.Log("Pressed to close");
+                Debug.Log(kitharaCloseUp.activeSelf);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,27 +50,7 @@ public class KitharaObject : MonoBehaviour
         if(collision.CompareTag("Player") == true)
         {
             kitharaText.SetActive(true);
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") == true && Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("In press, before if");
-            Debug.Log("In press, closeupactivated: " + closeUpActivated);
-            if (closeUpActivated == false)
-            {
-                kitharaCloseUp.SetActive(true);
-                closeUpActivated = true;
-                Debug.Log("Pressed to set active");
-            }
-            else if (closeUpActivated == true)
-            {
-                kitharaCloseUp.SetActive(false);
-                closeUpActivated = false;
-                Debug.Log("Pressed to close");
-            }
+            inCollder = true;
         }
     }
 
@@ -60,6 +59,7 @@ public class KitharaObject : MonoBehaviour
         if (collision.CompareTag("Player") == true)
         {
             kitharaText.SetActive(false);
+            inCollder = false;
         }
     }
 
