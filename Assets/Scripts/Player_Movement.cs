@@ -52,7 +52,7 @@ public class Player_Movement : MonoBehaviour {
         }
 
         //Attackera
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Return)) //return = enter //|| Input.GetMouseButtonDown(0)
         {
             Attack();
         }

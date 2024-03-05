@@ -36,7 +36,7 @@ public class KitharaObject : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") == true && Input.GetKey(KeyCode.F))
+        if (collision.CompareTag("Player") == true && Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("In press, before if");
             Debug.Log("In press, closeupactivated: " + closeUpActivated);
