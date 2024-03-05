@@ -7214,7 +7214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079562231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -59.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7237,7 +7237,7 @@ MonoBehaviour:
   target: {fileID: 1300540393}
   returnPoint: {fileID: 748834327}
   player: {fileID: 1300540390}
-  speed: 200
+  speed: 300
   nextWayPointDistance: 1
   returnPointCollider: {fileID: 748834329}
   isAlive: 1
@@ -7284,7 +7284,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
