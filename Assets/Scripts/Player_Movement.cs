@@ -8,7 +8,6 @@ public class Player_Movement : MonoBehaviour {
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private Transform groundCheck; //Kollar om spelaren är på marken eller inte
     [SerializeField] private LayerMask groundMask; //Vad tolkas som mark?
-    private Rigidbody2D rigidBody2D;
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;
@@ -25,7 +24,6 @@ public class Player_Movement : MonoBehaviour {
     private void Start() {
         rb = GetComponent<Rigidbody2D>(); //Hämtar referens till spelarens rigidbody
         animator = GetComponent<Animator>();
-        rigidBody2D = gameObject.GetComponent<Rigidbody2D>();
 
         //AttackArea = transform.GetChild(0).gameObject;
         attackArea = gameObject.GetComponentInChildren<AttackArea>();
@@ -54,7 +52,7 @@ public class Player_Movement : MonoBehaviour {
         }
 
         //Attackera
-        if (Input.GetKeyDown(KeyCode.Return)) //return = enter //|| Input.GetMouseButtonDown(0)
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetMouseButtonDown(0))
         {
             Attack();
         }
@@ -90,12 +88,5 @@ public class Player_Movement : MonoBehaviour {
     {
         attackArea.gameObject.SetActive(attacking);
         //enablear attack area efter en liten stund så det timear med att animation hinner tr�ffa fienden
-    }
-
-    public bool IsFalling() {
-        if (rigidBody2D.velocity.y < -1f) {
-            return true;
-        }
-        return false;
     }
 }
