@@ -10,18 +10,18 @@ public class FieldOfView : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
 
         //värden för field of view
-        float fieldOfView = 90f;
+        float fieldOfView = 9f;
         Vector3 origin = Vector3.zero;
         int rayCount = 2;
         float angle = 0f;
-        float angleIncrease = fieldOfView/ rayCount;
-        float viewDistance = 50f;
+        float angleIncrease = fieldOfView / rayCount;
+        float viewDistance = 5f;
 
         // våra rays består av vertiser, vilket vi skapar här nedan
         // vår original vertis räknas som 1, sedan behöver vi för en triangel skapa en vertis vid 90, 45 och 0 grader = 4
         // rayCount här, räknar bara vertisen på 90 och 45 grader, inte den på 0 grader och original vertisen, därför står det inte bara 4 istället för rayCount + 1 +1
-        Vector3[] vertices = new Vector3[rayCount + 1 + 1]; 
-        
+        Vector3[] vertices = new Vector3[rayCount + 1 + 1];
+
         // vår uv ska ha samma sak så vi kan hämta våra värden från vertiserna för att hitta rätt längd
         Vector2[] uv = new Vector2[vertices.Length];
 
@@ -37,19 +37,29 @@ public class FieldOfView : MonoBehaviour
         {
             Vector3 vertex = origin + GetVectorFromAngle(angle) * viewDistance;
             vertices[vertexIndex] = vertex;
+
+            //detta kommer skapa triangeln baserat på vertiserna, om  i > 0, för att detta inte kan köras på den första ray:n då den inte han en vertis att koppla till
+            if (i > 0)
+            {
+                triangles[triangleIndex + 0] = 0; // vertisen på origin
+                triangles[triangleIndex + 1] = vertexIndex - 1; // vertisen innan
+                triangles[triangleIndex + 2] = vertexIndex; // den nuvarande vertisen
+
+                triangleIndex += 3;
+
+            }
+            vertexIndex++;
             angle -= angleIncrease;
-            triangles[triangleIndex + 0] = 0;
-            triangles[triangleIndex + 1] = 0;
-            triangles[triangleIndex + 2] = 0;
         }
 
+        // konverterar vinkeln till en vector3
         static Vector3 GetVectorFromAngle(float angle)
         {
             float angleRad = angle * (Mathf.PI / 180f);
             return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
 
         }
-        
+
         vertices[1] = new Vector3(50, 0);
         vertices[2] = new Vector3(0, -50);
 
