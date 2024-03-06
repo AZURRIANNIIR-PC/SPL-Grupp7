@@ -19,10 +19,10 @@ public class KitharaCloseUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(kitharaCloseUp.active == true)
+        //if(kitharaCloseUp.activeSelf == true)
         //{
         //    playerMovement.enabled = false;
-        //} else if (kitharaCloseUp.active == false)
+        //} else if (kitharaCloseUp.activeSelf == false)
         //{
         //    playerMovement.enabled = true;
         //}

@@ -27,20 +27,15 @@ public class KitharaObject : MonoBehaviour
     {
         if(inCollder == true && Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("In press, before if");
             if (closeUpActivated == false)
             {
                 kitharaCloseUp.SetActive(true);
                 closeUpActivated = true;
-                Debug.Log("Pressed to set active");
-                Debug.Log(kitharaCloseUp.activeSelf);
             }
             else if (closeUpActivated == true)
             {
                 kitharaCloseUp.SetActive(false);
                 closeUpActivated = false;
-                Debug.Log("Pressed to close");
-                Debug.Log(kitharaCloseUp.activeSelf);
             }
         }
     }
