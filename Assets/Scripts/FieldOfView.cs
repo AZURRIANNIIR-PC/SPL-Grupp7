@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
+   [SerializeField] private LayerMask layerMask;
+    private Mesh mesh;
+    private float fieldOfView;
+    private Vector3 origin;
+    private float startingAngle;
     private void Start()
     {
-        Mesh mesh = new Mesh();
+        mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+        fieldOfView = 17.5f; // också ett värde för field of view som kan justeras, behövde flytta upp för att andra metoder ska funka
+        origin = Vector3.zero;
+        
+    }
 
+    private void Update()
+    { 
         //värden för field of view
-        float fieldOfView = 17.5f;
-        Vector3 origin = Vector3.zero;
         int rayCount = 50;
-        float angle = 0f;
+        float angle = startingAngle;
         float angleIncrease = fieldOfView / rayCount;
         float viewDistance = 12.5f;
 
@@ -36,10 +45,10 @@ public class FieldOfView : MonoBehaviour
         for (int i = 0; i <= rayCount; i++)
         {
             Vector3 vertex;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
             // If-satsen kollar efter kollisioner mellan synfätet och omvärlden, och anpassar synfätet utefter detta
 
-            // Debug log to print information about raycast hit
+            // kolla vad raycasten träffar för debug
             if (raycastHit2D.collider != null)
             {
                 Debug.Log("Ray hit: " + raycastHit2D.collider.gameObject.name + " at position: " + raycastHit2D.point);
@@ -70,12 +79,7 @@ public class FieldOfView : MonoBehaviour
         }
 
         // konverterar vinkeln till en vector3
-        static Vector3 GetVectorFromAngle(float angle)
-        {
-            float angleRad = angle * (Mathf.PI / 180f);
-            return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
-
-        }
+        
 
         /*vertices[1] = new Vector3(50, 0);
         vertices[2] = new Vector3(0, -50);
@@ -87,5 +91,30 @@ public class FieldOfView : MonoBehaviour
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
+    }
+
+    static Vector3 GetVectorFromAngle(float angle)
+    {
+        float angleRad = angle * (Mathf.PI / 180f);
+        return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+
+    }
+
+    //följande tar en vector3 och returnerar en float
+    static float GetAngleFromVectorFloat(Vector3 direction)
+    {
+        direction = direction.normalized;
+        float n = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if (n < 0) n += 360;
+        return n;
+    }
+
+    public void SetOrigin(Vector3 origin)
+    {
+        this.origin = origin;
+    }
+    public void setAimDirection(Vector3 aimDirection)
+    {
+        startingAngle = GetAngleFromVectorFloat(aimDirection) - fieldOfView / 2f;
     }
 }
