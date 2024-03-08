@@ -10613,8 +10613,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40bf1be9efdc2d4688f57db00e28805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fieldOfView: {fileID: 0}
-  enemyTransform: {fileID: 1974316168}
+  fieldOfView: {fileID: 2028970866}
+  amplitude: 1
+  frequency: 1
 --- !u!1 &2016369351
 GameObject:
   m_ObjectHideFlags: 0

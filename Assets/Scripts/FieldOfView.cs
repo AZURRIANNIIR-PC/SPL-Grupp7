@@ -9,6 +9,7 @@ public class FieldOfView : MonoBehaviour
     private float fieldOfView;
     private Vector3 origin;
     private float startingAngle;
+    private float rotationAngle = 0f; // Track rotation angle
     private void Start()
     {
         mesh = new Mesh();
@@ -91,9 +92,20 @@ public class FieldOfView : MonoBehaviour
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
+        // Set the aim direction in the FieldOfView component
+        setRotationAngle(rotationAngle);
+
     }
 
-    static Vector3 GetVectorFromAngle(float angle)
+    // New method to set the rotation angle
+    public void setRotationAngle(float angle)
+    {
+        startingAngle = angle;
+    }
+
+
+
+static Vector3 GetVectorFromAngle(float angle)
     {
         float angleRad = angle * (Mathf.PI / 180f);
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));

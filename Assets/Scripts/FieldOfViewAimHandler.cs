@@ -3,19 +3,30 @@ using UnityEngine;
 public class FieldOfViewAimHandler : MonoBehaviour
 {
     [SerializeField] private FieldOfView fieldOfView;
-    [SerializeField] private Transform enemyTransform; // The transform of the enemy controlling the aim
+    [SerializeField] private float amplitude = 1f; // Amplitude of the vertical movement
+    [SerializeField] private float frequency = 1f; // Frequency of the vertical movement
+    private float timeElapsed;
+    [SerializeField] private float rotationAmplitude = 15f; // Amplitude of the rotation
+    [SerializeField] private float rotationSpeed = 1f; // Speed of the rotation
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (enemyTransform != null)
-        {
-            // Get the aim direction from the enemy's position to a target position (e.g., the player)
-           // Vector3 aimDirection = /* Calculate the aim direction here */
+        // Calculate vertical movement based on sine function
+        float yOffset = Mathf.Sin(timeElapsed * frequency) * amplitude;
 
-            // Set the aim direction in the FieldOfView component
-            //fieldOfView.setAimDirection(aimDirection);
-        }
+        // Set the field of view's origin to the enemy's position with the vertical offset applied
+        Vector3 originWithOffset = transform.position + new Vector3(0f, yOffset, 0f);
+        fieldOfView.SetOrigin(originWithOffset);
+
+        // Increment time elapsed
+        //timeElapsed += Time.deltaTime;
+        // Calculate the rotation angle based on sine function
+        float rotationAngle = Mathf.Sin(Time.time * rotationSpeed) * rotationAmplitude;
+
+        // Set the rotation angle in the FieldOfView component
+        fieldOfView.setRotationAngle(rotationAngle);
     }
 }
+
+
 
