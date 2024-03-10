@@ -5,18 +5,22 @@ using UnityEngine;
 public class FieldOfView : MonoBehaviour
 {
    [SerializeField] private LayerMask layerMask;
-    private Mesh mesh;
-    private float fieldOfView;
-    private Vector3 origin;
-    private float startingAngle;
-    private float rotationAngle = 0f; // Track rotation angle
+   private Mesh mesh;
+   private float fieldOfView;
+   private Vector3 origin;
+   private float startingAngle;
+   private float rotationAngle = 0f; // för att hålla reda på rotationsvärde
+   public float verticalOffset = 2f; // detta så att synfältet börjar på vaktens ögonnivå
+
     private void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-        fieldOfView = 17.5f; // också ett värde för field of view som kan justeras, behövde flytta upp för att andra metoder ska funka
+        fieldOfView = 12f; // också ett värde för field of view som kan justeras, behövde flytta upp för att andra metoder ska funka
         origin = Vector3.zero;
-        
+        // startingAngle behöver rikta åt andra hållet
+        startingAngle += 180f;
+
     }
 
     private void Update()
@@ -25,7 +29,7 @@ public class FieldOfView : MonoBehaviour
         int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = fieldOfView / rayCount;
-        float viewDistance = 12.5f;
+        float viewDistance = 25f;
 
         // våra rays består av vertiser, vilket vi skapar här nedan
         // vår original vertis räknas som 1, sedan behöver vi för en triangel skapa en vertis vid 90, 45 och 0 grader = 4
@@ -92,15 +96,15 @@ public class FieldOfView : MonoBehaviour
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
-        // Set the aim direction in the FieldOfView component
+        // sätter vinkeln enligt den önskade rotationen
         setRotationAngle(rotationAngle);
 
     }
 
-    // New method to set the rotation angle
+    // Metod för att sätta rotationsvärdet och riktning
     public void setRotationAngle(float angle)
     {
-        startingAngle = angle;
+        startingAngle = angle + 180f;
     }
 
 
