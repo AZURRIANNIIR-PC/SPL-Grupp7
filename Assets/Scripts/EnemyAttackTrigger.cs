@@ -7,7 +7,7 @@ public class EnemyAttackTrigger : MonoBehaviour
     private Animator animator;
     private AttackArea attackArea;
     private bool attacking = false;
-    private float timeToAttack = 0.73f;
+    private float timeToAttack = 2f;
     private float timer = 0;
 
     private bool inAttackTrigger = false;
@@ -56,9 +56,12 @@ public class EnemyAttackTrigger : MonoBehaviour
 
     private void Attack()
     {
-        attacking = true;
-        animator.SetTrigger("DoAttack"); //sätter igång animationen - är en trigger, inte en bool etc
-        Invoke("enableAttackArea", 0.3f);
+        if(attacking == false)
+        {
+            attacking = true;
+            animator.SetTrigger("DoAttack"); //sätter igång animationen - är en trigger, inte en bool etc
+            Invoke("enableAttackArea", 0.3f);
+        }
     }
 
     public void enableAttackArea()

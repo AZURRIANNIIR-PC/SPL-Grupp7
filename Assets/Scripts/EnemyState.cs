@@ -35,6 +35,7 @@ public class EnemyState : MonoBehaviour
         animator.SetBool("IsDead", true);
         rb.isKinematic = true; //stänger av rigidBody
         GetComponent<BoxCollider2D>().enabled = false; //då faller gubben genom marken lol
+        GetComponentInChildren<AttackArea>().enabled = false;
         //Invoke("DestroyGameObject", 1.3f);
     }
 
