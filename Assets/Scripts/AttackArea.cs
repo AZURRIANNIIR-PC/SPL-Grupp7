@@ -10,9 +10,13 @@ public class AttackArea : MonoBehaviour
     {
         if(collider.GetComponent<EnemyState>() != null)
         {
-            EnemyState health = collider.GetComponent<EnemyState>();
-            health.Damage(damage);
+            EnemyState enemyHealth = collider.GetComponent<EnemyState>();
+            enemyHealth.Damage(damage);
             Debug.Log("Enemy is hurt!");
+        } else if (collider.CompareTag("Player") == true)
+        {
+            PlayerState playerHealth = collider.GetComponent<PlayerState>();
+            playerHealth.doHarm(2);
         }
     }
 }
