@@ -10,7 +10,8 @@ public class FieldOfView : MonoBehaviour
    private Vector3 origin;
    private float startingAngle;
    private float rotationAngle = 0f; // för att hålla reda på rotationsvärde
-   public float verticalOffset = 2f; // detta så att synfältet börjar på vaktens ögonnivå
+   public float verticalOffset = 2f; // detta så att synfältet börjar på vaktens ögonnivå, dock det verkar som att flytta gameobject i scenen är effektivare
+   public Respawn respawn;
 
     private void Start()
     {
@@ -21,6 +22,13 @@ public class FieldOfView : MonoBehaviour
         // startingAngle behöver rikta åt andra hållet
         startingAngle += 180f;
 
+        // Get the Respawn component attached to the player
+        respawn = FindObjectOfType<Respawn>();
+        if (respawn == null)
+        {
+            Debug.LogError("Respawn component not found!");
+        }
+
     }
 
     private void Update()
@@ -29,7 +37,7 @@ public class FieldOfView : MonoBehaviour
         int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = fieldOfView / rayCount;
-        float viewDistance = 25f;
+        float viewDistance = 40f;
 
         // våra rays består av vertiser, vilket vi skapar här nedan
         // vår original vertis räknas som 1, sedan behöver vi för en triangel skapa en vertis vid 90, 45 och 0 grader = 4
@@ -52,6 +60,12 @@ public class FieldOfView : MonoBehaviour
             Vector3 vertex;
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
             // If-satsen kollar efter kollisioner mellan synfätet och omvärlden, och anpassar synfätet utefter detta
+
+            if (raycastHit2D.collider != null && raycastHit2D.collider.CompareTag("Player"))
+            {
+                Debug.Log("Player detected in field of view!");
+                KillPlayer();
+            }
 
             // kolla vad raycasten träffar för debug
             if (raycastHit2D.collider != null)
@@ -81,6 +95,7 @@ public class FieldOfView : MonoBehaviour
             }
             vertexIndex++;
             angle -= angleIncrease;
+
         }
 
         // konverterar vinkeln till en vector3
@@ -97,12 +112,12 @@ public class FieldOfView : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
         // sätter vinkeln enligt den önskade rotationen
-        setRotationAngle(rotationAngle);
+        SetRotationAngle(rotationAngle);
 
     }
 
     // Metod för att sätta rotationsvärdet och riktning
-    public void setRotationAngle(float angle)
+    public void SetRotationAngle(float angle)
     {
         startingAngle = angle + 180f;
     }
@@ -125,12 +140,27 @@ static Vector3 GetVectorFromAngle(float angle)
         return n;
     }
 
+    // set origin med den vertikala ofsetten inräknad så den inte missar vissa obstacles i banan
     public void SetOrigin(Vector3 origin)
     {
-        this.origin = origin;
+        this.origin = origin + Vector3.up * verticalOffset;
     }
-    public void setAimDirection(Vector3 aimDirection)
+    public void SetAimDirection(Vector3 aimDirection)
     {
         startingAngle = GetAngleFromVectorFloat(aimDirection) - fieldOfView / 2f;
     }
+
+    private void KillPlayer()
+    {
+        // trigga spelardöd och respawn
+        if (respawn != null)
+        {
+            respawn.PlayerRespawn();
+        }
+        else
+        {
+            Debug.LogError("Respawn component is missing!");
+        }
+    }
+
 }

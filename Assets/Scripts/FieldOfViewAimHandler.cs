@@ -22,16 +22,16 @@ public class FieldOfViewAimHandler : MonoBehaviour
 
 
         // Set the field of view's origin to the enemy's position with the vertical offset applied
-        Vector3 originWithOffset = transform.position + new Vector3(0f, yOffset, 2f);
+        Vector3 originWithOffset = transform.position + new Vector3(0f, yOffset, 4f);
         fieldOfView.SetOrigin(originWithOffset);
 
         // Increment time elapsed
-        //timeElapsed += Time.deltaTime;
+        timeElapsed += Time.deltaTime;
         // Calculate the rotation angle based on sine function
         float rotationAngle = Mathf.Sin(Time.time * rotationSpeed) * rotationAmplitude;
 
         // Set the rotation angle in the FieldOfView component
-        fieldOfView.setRotationAngle(rotationAngle);
+        fieldOfView.SetRotationAngle(rotationAngle);
     }
 }
 
