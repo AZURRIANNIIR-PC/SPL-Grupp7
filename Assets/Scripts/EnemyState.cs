@@ -40,7 +40,7 @@ public class EnemyState : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = false; //då faller gubben genom marken lol
         GetComponentInChildren<AttackArea>().enabled = false;
         harmfulScript.enabled = false;
-        Invoke("DestroyGameObject", 1.3f);
+        Invoke("DestroyGameObject", 1f);
     }
 
     private void DestroyGameObject()
