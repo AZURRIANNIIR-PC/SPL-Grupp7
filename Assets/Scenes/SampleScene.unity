@@ -8490,7 +8490,7 @@ Animator:
   m_GameObject: {fileID: 340931061}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 833e79df6e7311940bc0d15b2fcb0611, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3f39c6ba248db482c8911e3a658f3c7d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8589,7 +8589,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1404507050, guid: e4ac48c2120e34eb9a0b95b6e57657b3, type: 3}
+  m_Sprite: {fileID: 781731805, guid: 39ab696fc26784996acc4ffbc71c0c56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -15618,6 +15618,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7924221757037364860, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924221758336360608, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
       propertyPath: respawnPosition
       value: 
