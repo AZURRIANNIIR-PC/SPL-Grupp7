@@ -7,11 +7,14 @@ public class EnemyState : MonoBehaviour
     [SerializeField] private int health = 6;
     private Animator animator;
     private Rigidbody2D rb;
+    EnemyHarmful harmfulScript;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        harmfulScript = GetComponent<EnemyHarmful>();
+        harmfulScript.enabled = true;
     }
 
     public void Damage(int amount)
@@ -36,7 +39,8 @@ public class EnemyState : MonoBehaviour
         rb.isKinematic = true; //stänger av rigidBody
         GetComponent<BoxCollider2D>().enabled = false; //då faller gubben genom marken lol
         GetComponentInChildren<AttackArea>().enabled = false;
-        //Invoke("DestroyGameObject", 1.3f);
+        harmfulScript.enabled = false;
+        Invoke("DestroyGameObject", 1.3f);
     }
 
     private void DestroyGameObject()
