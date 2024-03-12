@@ -9,6 +9,9 @@ public class KitharaObject : MonoBehaviour
     [SerializeField] GameObject kitharaText;
     private bool inCollder = false;
     private bool closeUpActivated = false;
+    Player_Movement playerMovementScript;
+    VolumeSettings volumeSettings;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,26 +24,28 @@ public class KitharaObject : MonoBehaviour
         //kitharaObject.SetActive(false);
 
         kitharaText.SetActive(false);
+
+        playerMovementScript = GameObject.FindObjectOfType<Player_Movement>();
+        volumeSettings= GameObject.FindObjectOfType<VolumeSettings>();
     }
 
     private void Update()
     {
         if(inCollder == true && Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("In press, before if");
             if (closeUpActivated == false)
             {
                 kitharaCloseUp.SetActive(true);
                 closeUpActivated = true;
-                Debug.Log("Pressed to set active");
-                Debug.Log(kitharaCloseUp.activeSelf);
+                //stänga av spelarens rörelse
+                playerMovementScript.enabled = false;
             }
             else if (closeUpActivated == true)
             {
                 kitharaCloseUp.SetActive(false);
                 closeUpActivated = false;
-                Debug.Log("Pressed to close");
-                Debug.Log(kitharaCloseUp.activeSelf);
+                //stänga av spelarens rörelser
+                playerMovementScript.enabled = true;
             }
         }
     }

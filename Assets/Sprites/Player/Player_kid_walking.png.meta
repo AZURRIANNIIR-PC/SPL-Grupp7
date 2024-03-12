@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dce89318a93b244a5a319983b88ce385
+guid: d42b717e848a848acbf9d2cdd21f8da4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 9
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_South_StripSheet_0
+      name: Player_kid_walking_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 1
-        width: 14
-        height: 22
+        y: 0
+        width: 38
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,41 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02a991e1c164424a8b680df88b811df
-      internalID: 302584863
+      spriteID: 7034ba3b358b54e06af21dba7cfa5091
+      internalID: -514642127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_1
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 1
-        width: 14
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50d171ab80664435cb94b725d1367ec0
-      internalID: -1835848984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_South_StripSheet_2
+      name: Player_kid_walking_1
       rect:
         serializedVersion: 2
         x: 53
         y: 1
-        width: 14
-        height: 21
+        width: 32
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 239fce27bd1e547bb8dd3f11746425ba
-      internalID: -1408994983
+      spriteID: 9195eba7fa83544279e06067eea81e22
+      internalID: 1316390431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_3
+      name: Player_kid_walking_2
       rect:
         serializedVersion: 2
-        x: 77
-        y: 1
-        width: 14
-        height: 21
+        x: 105
+        y: 0
+        width: 25
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +185,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2532cf01d8bd34c19ac9f65cbbd9c7f8
-      internalID: 1791862673
+      spriteID: d41bddae3aeb34c6ca4123b484c2d204
+      internalID: 124008542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_kid_walking_3
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 0
+        width: 28
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37af384710f6e4da886d6deac1a41a19
+      internalID: 979038146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_kid_walking_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e721fbc33f94d45ca9b8046a813c7b40
+      internalID: 490128535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_kid_walking_5
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1
+        width: 25
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a60b64f36dad49538e257eaae1f5244
+      internalID: 232386607
       vertices: []
       indices: 
       edges: []
@@ -223,10 +265,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_South_StripSheet_0: 302584863
-      Idle_South_StripSheet_1: -1835848984
-      Idle_South_StripSheet_2: -1408994983
-      Idle_South_StripSheet_3: 1791862673
+      Player_kid_walking_0: -514642127
+      Player_kid_walking_1: 1316390431
+      Player_kid_walking_2: 124008542
+      Player_kid_walking_3: 979038146
+      Player_kid_walking_4: 490128535
+      Player_kid_walking_5: 232386607
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

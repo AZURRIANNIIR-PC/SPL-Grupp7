@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dce89318a93b244a5a319983b88ce385
+guid: b7851e25a1b434f7c8752e878c0e0f37
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 9
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_South_StripSheet_0
+      name: Enemywarrior_Run_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1
-        width: 14
-        height: 22
+        x: 7
+        y: 0
+        width: 23
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02a991e1c164424a8b680df88b811df
-      internalID: 302584863
+      spriteID: 43dfe3178e6214ecfa2f27291ef2c73f
+      internalID: 611113910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_1
+      name: Enemywarrior_Run_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 1
-        width: 14
-        height: 21
+        x: 55
+        y: 0
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50d171ab80664435cb94b725d1367ec0
-      internalID: -1835848984
+      spriteID: 6476b990bcd8146d6abec34ff491b3b7
+      internalID: 1593092532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_2
+      name: Enemywarrior_Run_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1
-        width: 14
-        height: 21
+        x: 102
+        y: 0
+        width: 24
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 239fce27bd1e547bb8dd3f11746425ba
-      internalID: -1408994983
+      spriteID: 7d2eec576566a493a903ffd99f42f3d3
+      internalID: 907716446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_3
+      name: Enemywarrior_Run_3
       rect:
         serializedVersion: 2
-        x: 77
-        y: 1
-        width: 14
-        height: 21
+        x: 151
+        y: 0
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +206,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2532cf01d8bd34c19ac9f65cbbd9c7f8
-      internalID: 1791862673
+      spriteID: 17483be1565b64059bccf7960eaa0cc3
+      internalID: -949131347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemywarrior_Run_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1c85f6f23a543fba108b26a330cc09
+      internalID: 1876336545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemywarrior_Run_5
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 0
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536e8639e65464e9796c90ba0f411d7e
+      internalID: -1536799484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemywarrior_Run_6
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 0
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3457a8cd63bca42b0879765a9b3651a3
+      internalID: -402633536
       vertices: []
       indices: 
       edges: []
@@ -223,10 +286,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_South_StripSheet_0: 302584863
-      Idle_South_StripSheet_1: -1835848984
-      Idle_South_StripSheet_2: -1408994983
-      Idle_South_StripSheet_3: 1791862673
+      Enemywarrior_Run_0: 611113910
+      Enemywarrior_Run_1: 1593092532
+      Enemywarrior_Run_2: 907716446
+      Enemywarrior_Run_3: -949131347
+      Enemywarrior_Run_4: 1876336545
+      Enemywarrior_Run_5: -1536799484
+      Enemywarrior_Run_6: -402633536
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

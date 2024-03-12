@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e4ac48c2120e34eb9a0b95b6e57657b3
+guid: 568fd9fc4fc914298aa104cd0ae8a670
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -129,106 +129,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IdleSpartan-Sheet_0
+      name: Kid_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 5
         y: 0
-        width: 23
-        height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 40
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bff804ab4a7b24a0ba58441b234cb39c
-      internalID: -1404507050
+      spriteID: f9baed47ad47d4bbb8c23f32b7cef841
+      internalID: -798618403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpartan-Sheet_1
+      name: Kid_1
       rect:
         serializedVersion: 2
-        x: 55
+        x: 56
         y: 0
-        width: 23
-        height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d1ece87227a640bb95b0cfcf1e9c02c
-      internalID: -1922564758
+      spriteID: 55ebc929e406741caa9a615569ebb4ea
+      internalID: -643674893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpartan-Sheet_2
+      name: Kid_2
       rect:
         serializedVersion: 2
-        x: 103
+        x: 109
         y: 0
-        width: 23
-        height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 40
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 850082095899b44b998d75683c6dce5c
-      internalID: 1977357315
+      spriteID: 6455bb0c0afd942179531ce703ad2e8d
+      internalID: 1124750717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IdleSpartan-Sheet_3
+      name: Kid_3
       rect:
         serializedVersion: 2
-        x: 151
+        x: 159
         y: 0
-        width: 23
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 40
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 627deb32357e349e6b465610beaa8dca
-      internalID: -93567864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IdleSpartan-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 0
-        width: 23
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c9bf22ce45e74e29b2e382ad86b541d
-      internalID: 1765650086
+      spriteID: df066d630ef9b46e89c8925bb57dbb07
+      internalID: 2078897538
       vertices: []
       indices: 
       edges: []
@@ -244,11 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IdleSpartan-Sheet_0: -1404507050
-      IdleSpartan-Sheet_1: -1922564758
-      IdleSpartan-Sheet_2: 1977357315
-      IdleSpartan-Sheet_3: -93567864
-      IdleSpartan-Sheet_4: 1765650086
+      Kid_0: -798618403
+      Kid_1: -643674893
+      Kid_2: 1124750717
+      Kid_3: 2078897538
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

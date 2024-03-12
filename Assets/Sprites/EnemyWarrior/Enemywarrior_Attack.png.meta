@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6d1940f0129bb47e4934eaae0e60ca75
+guid: 5b4b24efb7ff74119bd61e764b043325
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,148 +129,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RunningSpartan-Sheet_0
+      name: Enemywarrior_Attack_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 0
-        width: 23
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 089180316b10f421bbe1d52fedc2d352
-      internalID: 159283743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RunningSpartan-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 55
+        x: 8
         y: 0
         width: 23
         height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d03a2dfd2bd149c8bda311bc46a492d
-      internalID: 691753241
+      spriteID: c78d4bfe19db4474ab2a45f97b4503cd
+      internalID: 2066276624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningSpartan-Sheet_2
+      name: Enemywarrior_Attack_1
       rect:
         serializedVersion: 2
-        x: 102
+        x: 74
         y: 0
-        width: 24
+        width: 30
         height: 36
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49bb36d539d6646eea721997903a687d
-      internalID: -917464632
+      spriteID: 05b623ebe9fe44c209942146bd31ce5f
+      internalID: -738945611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningSpartan-Sheet_3
+      name: Enemywarrior_Attack_2
       rect:
         serializedVersion: 2
-        x: 151
+        x: 138
         y: 0
-        width: 23
-        height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afaaf1f2c0db04082baec72df30404cc
-      internalID: 1654948667
+      spriteID: 4dc89d54b166f41abb449fbe289c0063
+      internalID: 1277044170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningSpartan-Sheet_4
+      name: Enemywarrior_Attack_3
       rect:
         serializedVersion: 2
-        x: 199
+        x: 200
         y: 0
-        width: 23
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02c2028896c24527aac56e2468b1fa3
-      internalID: -203496045
+      spriteID: 913bf279f640b4e469bb2c9d705f98be
+      internalID: 987942563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningSpartan-Sheet_5
+      name: Enemywarrior_Attack_4
       rect:
         serializedVersion: 2
-        x: 246
+        x: 258
         y: 0
-        width: 24
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e76c6621bcd04f0fac23dd4119d3459
-      internalID: -135685962
+      spriteID: caa435b7bdb1544e6a1d7e36579025d4
+      internalID: -1364999540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningSpartan-Sheet_6
+      name: Enemywarrior_Attack_5
       rect:
         serializedVersion: 2
-        x: 295
+        x: 321
         y: 0
-        width: 23
-        height: 38
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e5dd227710144873802b8e236c9ee34
-      internalID: 1492919802
+      spriteID: 4e57323375d8c446fa7194851a76f0f0
+      internalID: -1234259063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemywarrior_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 0
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8923355b2b44b406cabfe503a66f0f80
+      internalID: 723231804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemywarrior_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 0
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072dc80d5b11744a3bed9112d00f60bc
+      internalID: -1271001145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemywarrior_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 0
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a293085b1d76f496d8dcfb0ae4a5ba00
+      internalID: -2072008228
       vertices: []
       indices: 
       edges: []
@@ -286,13 +328,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RunningSpartan-Sheet_0: 159283743
-      RunningSpartan-Sheet_1: 691753241
-      RunningSpartan-Sheet_2: -917464632
-      RunningSpartan-Sheet_3: 1654948667
-      RunningSpartan-Sheet_4: -203496045
-      RunningSpartan-Sheet_5: -135685962
-      RunningSpartan-Sheet_6: 1492919802
+      Enemywarrior_Attack_0: 2066276624
+      Enemywarrior_Attack_1: -738945611
+      Enemywarrior_Attack_2: 1277044170
+      Enemywarrior_Attack_3: 987942563
+      Enemywarrior_Attack_4: -1364999540
+      Enemywarrior_Attack_5: -1234259063
+      Enemywarrior_Attack_6: 723231804
+      Enemywarrior_Attack_7: -1271001145
+      Enemywarrior_Attack_8: -2072008228
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

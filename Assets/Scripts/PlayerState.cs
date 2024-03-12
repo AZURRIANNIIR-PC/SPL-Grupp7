@@ -8,7 +8,9 @@ public class PlayerState : MonoBehaviour
     public int initialHealthPoints = 6;
 
     private Animator animator;
-    public bool isDead = false;
+    //private bool isDead = false;
+
+    public GameObject respawnPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -24,17 +26,30 @@ public class PlayerState : MonoBehaviour
 
         if (healthPoints <= 0)
         {
-            isDead = true; //beh�vs egentligen inte rn, men kan beh�lla variabeln f�r ifall jag tex vill g�ra s� att spelaren inte ska kunna g� d� etc
-            //animator.SetTrigger("isDead");
+            //isDead = true; //beh�vs egentligen inte rn, men kan beh�lla variabeln f�r ifall jag tex vill g�ra s� att spelaren inte ska kunna g� d� etc
+            //animator.SetTrigger("IsDead");
+            animator.SetBool("IsDead", true);
             //Invoke("stopDeathAnimation", 1f);
-            ////respawn();
+            Invoke("Respawn", 1.3f);
             Debug.Log("Player is dead!");
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
-        else
-        {
+        //else
+        //{
             //animator.SetTrigger("isHurt");
             //Invoke("stopHurtAnimation", 0.4f);
-        }
+        //}
+    }
+
+    private void Respawn()
+    {
+        healthPoints = initialHealthPoints;
+        gameObject.transform.position = respawnPosition.transform.position;
+        animator.SetBool("IsDead", false);
+    }
+
+    public void ChangeRespawnPosition(GameObject newRespawnPosition)
+    {
+        respawnPosition = newRespawnPosition;
     }
 }

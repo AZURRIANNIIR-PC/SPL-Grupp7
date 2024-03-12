@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dce89318a93b244a5a319983b88ce385
+guid: 5da7f17fa449f4b2da94e71f747af348
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 9
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -125,89 +125,206 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_South_StripSheet_0
+      name: AttackSpartan-Sheet_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8
+        y: 0
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02a991e1c164424a8b680df88b811df
-      internalID: 302584863
+      spriteID: 2efc17d87c6804910bbe843310bf177f
+      internalID: 661876244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_1
+      name: AttackSpartan-Sheet_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 1
-        width: 14
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 74
+        y: 0
+        width: 30
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50d171ab80664435cb94b725d1367ec0
-      internalID: -1835848984
+      spriteID: 2e08c71cbad4845c2850c523eca3ee60
+      internalID: -1388894627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_2
+      name: AttackSpartan-Sheet_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1
-        width: 14
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 138
+        y: 0
+        width: 34
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 239fce27bd1e547bb8dd3f11746425ba
-      internalID: -1408994983
+      spriteID: 2b674fe395950460f9f4e9a8170bb636
+      internalID: 1141313145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_3
+      name: AttackSpartan-Sheet_3
       rect:
         serializedVersion: 2
-        x: 77
-        y: 1
-        width: 14
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 200
+        y: 0
+        width: 39
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2532cf01d8bd34c19ac9f65cbbd9c7f8
-      internalID: 1791862673
+      spriteID: e23dc0b74d91b4bb08258700e10c4210
+      internalID: -1904687540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackSpartan-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 38
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27b18e62ba1242168d5d6fa8971c66c
+      internalID: 1219397746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackSpartan-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 0
+        width: 38
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7acac996a0bc0425f88f84bec1974f43
+      internalID: 1897376406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackSpartan-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 0
+        width: 55
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a6c4566cf924d4783195911bd98845
+      internalID: -110473331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackSpartan-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 0
+        width: 42
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59dbe0d82f0a74044a207fb9697e723e
+      internalID: 1611297105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackSpartan-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 0
+        width: 32
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e91f051cf0e4bb995e63c338d86026
+      internalID: -681901333
       vertices: []
       indices: 
       edges: []
@@ -223,10 +340,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_South_StripSheet_0: 302584863
-      Idle_South_StripSheet_1: -1835848984
-      Idle_South_StripSheet_2: -1408994983
-      Idle_South_StripSheet_3: 1791862673
+      AttackSpartan-Sheet_0: 661876244
+      AttackSpartan-Sheet_1: -1388894627
+      AttackSpartan-Sheet_2: 1141313145
+      AttackSpartan-Sheet_3: -1904687540
+      AttackSpartan-Sheet_4: 1219397746
+      AttackSpartan-Sheet_5: 1897376406
+      AttackSpartan-Sheet_6: -110473331
+      AttackSpartan-Sheet_7: 1611297105
+      AttackSpartan-Sheet_8: -681901333
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

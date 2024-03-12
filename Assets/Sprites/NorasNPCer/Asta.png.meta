@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dce89318a93b244a5a319983b88ce385
+guid: 9f8455ef52a3d4c6eb732f43385e3cda
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 9
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_South_StripSheet_0
+      name: Asta_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 1
-        width: 14
-        height: 22
+        y: 0
+        width: 40
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02a991e1c164424a8b680df88b811df
-      internalID: 302584863
+      spriteID: bb1359ec0eb7245ad907206b57761196
+      internalID: -1284641213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_1
+      name: Asta_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 1
-        width: 14
-        height: 21
+        x: 56
+        y: 0
+        width: 40
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50d171ab80664435cb94b725d1367ec0
-      internalID: -1835848984
+      spriteID: 86975a1ef118646f5b839a90b058e936
+      internalID: -677456947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_2
+      name: Asta_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1
-        width: 14
-        height: 21
+        x: 109
+        y: 0
+        width: 40
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 239fce27bd1e547bb8dd3f11746425ba
-      internalID: -1408994983
+      spriteID: 41a9148ad8a2646af8ce2e42484d1917
+      internalID: 921354806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_3
+      name: Asta_3
       rect:
         serializedVersion: 2
-        x: 77
-        y: 1
-        width: 14
-        height: 21
+        x: 159
+        y: 0
+        width: 40
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2532cf01d8bd34c19ac9f65cbbd9c7f8
-      internalID: 1791862673
+      spriteID: ea6aaf06ea4cd4cf19e1945a5d764801
+      internalID: 489278624
       vertices: []
       indices: 
       edges: []
@@ -223,10 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_South_StripSheet_0: 302584863
-      Idle_South_StripSheet_1: -1835848984
-      Idle_South_StripSheet_2: -1408994983
-      Idle_South_StripSheet_3: 1791862673
+      Asta_0: -1284641213
+      Asta_1: -677456947
+      Asta_2: 921354806
+      Asta_3: 489278624
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

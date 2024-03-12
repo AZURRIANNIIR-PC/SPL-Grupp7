@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7eaafe5f218c424eb6fb696412db52b
+guid: 6d1940f0129bb47e4934eaae0e60ca75
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -125,14 +125,47 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_0
+      name: RunningSpartan-Sheet_0
       rect:
         serializedVersion: 2
         x: 7
+        y: 0
+        width: 23
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089180316b10f421bbe1d52fedc2d352
+      internalID: 159283743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunningSpartan-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 55
         y: 0
         width: 23
         height: 38
@@ -143,40 +176,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af76f3e07688e4bb6a87a30f3afba27c
-      internalID: 1330253992
+      spriteID: 8d03a2dfd2bd149c8bda311bc46a492d
+      internalID: 691753241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_1
+      name: RunningSpartan-Sheet_2
       rect:
         serializedVersion: 2
-        x: 57
-        y: 1
-        width: 30
-        height: 37
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99ffa54e26f25433794c9e49997e6086
-      internalID: -579417243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 2
-        width: 37
+        x: 102
+        y: 0
+        width: 24
         height: 36
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -185,104 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 426ec564c6c684fe1945f11ab1551d1a
-      internalID: 445583534
+      spriteID: 49bb36d539d6646eea721997903a687d
+      internalID: -917464632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_3
+      name: RunningSpartan-Sheet_3
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1
-        width: 45
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82530e63729de465abd7a5c5200c8e80
-      internalID: -1946613497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 39
-        width: 16
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79c4b35fc92b14c6c90f8efce2462da2
-      internalID: 1213574597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 185
-        y: 40
-        width: 12
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37c607daa81ba453ba982fa1f4119d82
-      internalID: 852683429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 181
-        y: 40
-        width: 16
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 338e8c8d358174e4db002c3cddfa162d
-      internalID: -617980824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 289
+        x: 151
         y: 0
-        width: 41
-        height: 33
+        width: 23
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2414ffb9452454377a69d2851efdb911
-      internalID: 1684722108
+      spriteID: afaaf1f2c0db04082baec72df30404cc
+      internalID: 1654948667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_8
+      name: RunningSpartan-Sheet_4
       rect:
         serializedVersion: 2
-        x: 337
+        x: 199
         y: 0
-        width: 41
-        height: 33
+        width: 23
+        height: 39
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,103 +239,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29c375a2ccf3a471d80c81089545a9d2
-      internalID: -1125191074
+      spriteID: c02c2028896c24527aac56e2468b1fa3
+      internalID: -203496045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_9
+      name: RunningSpartan-Sheet_5
       rect:
         serializedVersion: 2
-        x: 385
+        x: 246
         y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b1104fa97e124078a568c1f042f744f
-      internalID: 2096790017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 433
-        y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cac52f00525e4c96a2cfabca5dd4837
-      internalID: 1420934145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 481
-        y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e0568f37985c4fd283fc171f2c41fe2
-      internalID: 152044933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 0
-        width: 41
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6de7d3805239844289a5bf8c6a5d4f62
-      internalID: 643659357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeathSpartan-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 0
-        width: 46
+        width: 24
         height: 37
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -416,20 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67fab3860f44d403ca5d9184a2823bfa
-      internalID: 2012524408
+      spriteID: 1e76c6621bcd04f0fac23dd4119d3459
+      internalID: -135685962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DeathSpartan-Sheet_14
+      name: RunningSpartan-Sheet_6
       rect:
         serializedVersion: 2
-        x: 241
+        x: 295
         y: 0
-        width: 41
-        height: 35
+        width: 23
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,8 +281,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cecaed1f4d184467b7df3635f3bae96
-      internalID: -1062737868
+      spriteID: 5e5dd227710144873802b8e236c9ee34
+      internalID: 1492919802
       vertices: []
       indices: 
       edges: []
@@ -454,21 +298,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DeathSpartan-Sheet_0: 1330253992
-      DeathSpartan-Sheet_1: -579417243
-      DeathSpartan-Sheet_10: 1420934145
-      DeathSpartan-Sheet_11: 152044933
-      DeathSpartan-Sheet_12: 643659357
-      DeathSpartan-Sheet_13: 2012524408
-      DeathSpartan-Sheet_14: -1062737868
-      DeathSpartan-Sheet_2: 445583534
-      DeathSpartan-Sheet_3: -1946613497
-      DeathSpartan-Sheet_4: 1213574597
-      DeathSpartan-Sheet_5: 852683429
-      DeathSpartan-Sheet_6: -617980824
-      DeathSpartan-Sheet_7: 1684722108
-      DeathSpartan-Sheet_8: -1125191074
-      DeathSpartan-Sheet_9: 2096790017
+      RunningSpartan-Sheet_0: 159283743
+      RunningSpartan-Sheet_1: 691753241
+      RunningSpartan-Sheet_2: -917464632
+      RunningSpartan-Sheet_3: 1654948667
+      RunningSpartan-Sheet_4: -203496045
+      RunningSpartan-Sheet_5: -135685962
+      RunningSpartan-Sheet_6: 1492919802
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

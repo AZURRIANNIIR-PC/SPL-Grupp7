@@ -63,7 +63,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gladiator_Death
+  m_Name: Enemywarrior_Death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -79,7 +79,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 197e89242d6acdb46bbc4f81c94508d1, type: 2}
+  m_Motion: {fileID: 7400000, guid: 04627302cfaea4979ad3048216c4e8e6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -96,23 +96,23 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 5916232133358207354}
-    m_Position: {x: 320, y: 130, z: 0}
+    m_Position: {x: 300, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3896185501922193121}
-    m_Position: {x: 320, y: 240, z: 0}
+    m_Position: {x: 300, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2978558818197296719}
-    m_Position: {x: 600, y: 200, z: 0}
+    m_Position: {x: 630, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5086271032184355318}
-    m_Position: {x: 550, y: 70, z: 0}
+    m_Position: {x: 630, y: 50, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_AnyStatePosition: {x: 60, y: -30, z: 0}
+  m_EntryPosition: {x: 60, y: 50, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 5916232133358207354}
@@ -123,7 +123,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gladiator_Run
+  m_Name: Enemywarrior_Run
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -139,7 +139,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2494f2320e2f541d39066a3e1f6d51cf, type: 2}
+  m_Motion: {fileID: 7400000, guid: af826b0032d1b441ca3297c4f6504fd3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -226,7 +226,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerMovement
+  m_Name: EnemyWarrior_Movement
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Speed
@@ -234,19 +234,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: DoAttack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: IsDead
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -342,7 +342,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gladiator_Attack
+  m_Name: Enemywarrior_Attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -358,7 +358,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e2e59373aed27d648a2dc84195597607, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4a03859236b7049fba79b78d30f21637, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -424,7 +424,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gladiator_Idle
+  m_Name: Enemywarrior_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -440,7 +440,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4dbb29f06226c476d9a92e1046953c9b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 58ba94a1f1ae6408194d800f8e93cb21, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

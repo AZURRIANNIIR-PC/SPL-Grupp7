@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dce89318a93b244a5a319983b88ce385
+guid: 39ab696fc26784996acc4ffbc71c0c56
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 9
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_South_StripSheet_0
+      name: Enemywarrior_Idle_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1
-        width: 14
-        height: 22
+        x: 7
+        y: 0
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02a991e1c164424a8b680df88b811df
-      internalID: 302584863
+      spriteID: b9e94e142c6334b0db7fa7e1924e01cd
+      internalID: 781731805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_1
+      name: Enemywarrior_Idle_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 1
-        width: 14
-        height: 21
+        x: 55
+        y: 0
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50d171ab80664435cb94b725d1367ec0
-      internalID: -1835848984
+      spriteID: a2fb6002312c74dbead71a8bacd6e9ae
+      internalID: -1322874499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_2
+      name: Enemywarrior_Idle_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1
-        width: 14
-        height: 21
+        x: 103
+        y: 0
+        width: 23
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 239fce27bd1e547bb8dd3f11746425ba
-      internalID: -1408994983
+      spriteID: cdcc7c4abd9414a0fadc2e82e55c2351
+      internalID: -964242166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_3
+      name: Enemywarrior_Idle_3
       rect:
         serializedVersion: 2
-        x: 77
-        y: 1
-        width: 14
-        height: 21
+        x: 151
+        y: 0
+        width: 23
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,8 +206,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2532cf01d8bd34c19ac9f65cbbd9c7f8
-      internalID: 1791862673
+      spriteID: cbabb1a2c9d404003b047e3a0dd2c2a7
+      internalID: 1307083863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemywarrior_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548fe49e628084fe6bf0ac75d9cb2ba4
+      internalID: 1049759092
       vertices: []
       indices: 
       edges: []
@@ -223,10 +244,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_South_StripSheet_0: 302584863
-      Idle_South_StripSheet_1: -1835848984
-      Idle_South_StripSheet_2: -1408994983
-      Idle_South_StripSheet_3: 1791862673
+      Enemywarrior_Idle_0: 781731805
+      Enemywarrior_Idle_1: -1322874499
+      Enemywarrior_Idle_2: -964242166
+      Enemywarrior_Idle_3: 1307083863
+      Enemywarrior_Idle_4: 1049759092
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

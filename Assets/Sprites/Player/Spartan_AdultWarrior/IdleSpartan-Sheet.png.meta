@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dce89318a93b244a5a319983b88ce385
+guid: e4ac48c2120e34eb9a0b95b6e57657b3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 9
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -125,89 +125,122 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_South_StripSheet_0
+      name: IdleSpartan-Sheet_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1
-        width: 14
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7
+        y: 0
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02a991e1c164424a8b680df88b811df
-      internalID: 302584863
+      spriteID: bff804ab4a7b24a0ba58441b234cb39c
+      internalID: -1404507050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_1
+      name: IdleSpartan-Sheet_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 1
-        width: 14
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 55
+        y: 0
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50d171ab80664435cb94b725d1367ec0
-      internalID: -1835848984
+      spriteID: 8d1ece87227a640bb95b0cfcf1e9c02c
+      internalID: -1922564758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_2
+      name: IdleSpartan-Sheet_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1
-        width: 14
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 103
+        y: 0
+        width: 23
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 239fce27bd1e547bb8dd3f11746425ba
-      internalID: -1408994983
+      spriteID: 850082095899b44b998d75683c6dce5c
+      internalID: 1977357315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_South_StripSheet_3
+      name: IdleSpartan-Sheet_3
       rect:
         serializedVersion: 2
-        x: 77
-        y: 1
-        width: 14
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 151
+        y: 0
+        width: 23
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2532cf01d8bd34c19ac9f65cbbd9c7f8
-      internalID: 1791862673
+      spriteID: 627deb32357e349e6b465610beaa8dca
+      internalID: -93567864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleSpartan-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 23
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9bf22ce45e74e29b2e382ad86b541d
+      internalID: 1765650086
       vertices: []
       indices: 
       edges: []
@@ -223,10 +256,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_South_StripSheet_0: 302584863
-      Idle_South_StripSheet_1: -1835848984
-      Idle_South_StripSheet_2: -1408994983
-      Idle_South_StripSheet_3: 1791862673
+      IdleSpartan-Sheet_0: -1404507050
+      IdleSpartan-Sheet_1: -1922564758
+      IdleSpartan-Sheet_2: 1977357315
+      IdleSpartan-Sheet_3: -93567864
+      IdleSpartan-Sheet_4: 1765650086
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
