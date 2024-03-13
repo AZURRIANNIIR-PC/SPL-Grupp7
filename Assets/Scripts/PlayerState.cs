@@ -6,6 +6,7 @@ public class PlayerState : MonoBehaviour
 {
     public int healthPoints = 6;
     public int initialHealthPoints = 6;
+    public int foodAmount = 0;
 
     private Animator animator;
     //private bool isDead = false;
@@ -51,5 +52,10 @@ public class PlayerState : MonoBehaviour
     public void ChangeRespawnPosition(GameObject newRespawnPosition)
     {
         respawnPosition = newRespawnPosition;
+    }
+
+    public void FoodPickup()
+    {
+        foodAmount++;
     }
 }

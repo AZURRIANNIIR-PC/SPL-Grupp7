@@ -63,15 +63,11 @@ public class FieldOfView : MonoBehaviour
 
             if (raycastHit2D.collider != null && raycastHit2D.collider.CompareTag("Player"))
             {
-                Debug.Log("Player detected in field of view!");
+                
                 KillPlayer();
             }
 
-            // kolla vad raycasten träffar för debug
-            if (raycastHit2D.collider != null)
-            {
-                Debug.Log("Ray hit: " + raycastHit2D.collider.gameObject.name + " at position: " + raycastHit2D.point);
-            }
+     
 
             if (raycastHit2D.collider == null)
             {
@@ -159,7 +155,7 @@ static Vector3 GetVectorFromAngle(float angle)
         }
         else
         {
-            Debug.LogError("Respawn component is missing!");
+            Debug.LogError("Respawn component is missing");
         }
     }
 
