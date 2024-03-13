@@ -37,7 +37,7 @@ public class FieldOfView : MonoBehaviour
         int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = fieldOfView / rayCount;
-        float viewDistance = 40f;
+        float viewDistance = 25f;
 
         // våra rays består av vertiser, vilket vi skapar här nedan
         // vår original vertis räknas som 1, sedan behöver vi för en triangel skapa en vertis vid 90, 45 och 0 grader = 4
