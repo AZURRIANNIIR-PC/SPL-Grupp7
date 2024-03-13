@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Lvl1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/AdinsTestScen.unity
+    guid: 7ae432083d412194eb80a75616df2630
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9a15dbc9944c1f246a8475dfe1866832
   m_configObjects: {}

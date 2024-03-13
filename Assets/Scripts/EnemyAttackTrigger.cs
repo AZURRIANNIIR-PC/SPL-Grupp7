@@ -7,10 +7,11 @@ public class EnemyAttackTrigger : MonoBehaviour
     private Animator animator;
     private AttackArea attackArea;
     private bool attacking = false;
-    private float timeToAttack = 2f;
+    private float timeToAttack = 0.7f;
     private float timer = 0;
 
     private bool inAttackTrigger = false;
+    private float colliderInactiveTime; //hur länge attackArea collidern har varit inaktiv, aka hur länge det gått sedan senaste attacken
 
     void Start()
     {
@@ -23,17 +24,23 @@ public class EnemyAttackTrigger : MonoBehaviour
     {
         if (inAttackTrigger == true) //&& timer >= timeToAttack
         {
-            Attack();
-            if (attacking == true)
+            // Kontrollera om det har gått minst [1.5] sekund sedan collidern sattes inaktiv - hur lång tid det ska ta mellan attacker
+            //ps denna siffra kan ändras till en public float, så att olika fiender kan ha olika difficulty
+            if (GetTimeSinceColliderInactive() >= 1.5f)
             {
-                timer += Time.deltaTime;
-                if (timer >= timeToAttack)
+                Attack();
+                if (attacking == true) //ifall fienden nu attackerar
                 {
-                    timer = 0;
-                    attacking = false;
-                    attackArea.gameObject.SetActive(attacking);
-                }
+                    timer += Time.deltaTime; //öka timern med Time.deltatime (tiden som gått sen senaste framen)
+                    if (timer >= timeToAttack) //ifall timern når tiden för hur lång tid det tar att attackera - nollställ allt, sluta attackera
+                    {
+                        timer = 0;
+                        attacking = false;
+                        attackArea.gameObject.SetActive(false);
+                        SetColliderInactive(); //startar timern för hur lång tid det gått sedan attackArea sattes inaktiv
+                    }
 
+                }
             }
         }
     }
@@ -60,13 +67,23 @@ public class EnemyAttackTrigger : MonoBehaviour
         {
             attacking = true;
             animator.SetTrigger("DoAttack"); //sätter igång animationen - är en trigger, inte en bool etc
-            Invoke("enableAttackArea", 0.3f);
+            Invoke("EnableAttackArea", 0.3f);
         }
     }
 
-    public void enableAttackArea()
+    public void EnableAttackArea()
     {
         attackArea.gameObject.SetActive(attacking);
         //enablear attack area efter en liten stund så det timear med att animation hinner tr�ffa fienden
+    }
+
+    private void SetColliderInactive() //startar timern för när attackArea sattes inaktiv
+    {
+        colliderInactiveTime = Time.time;
+    }
+
+    private float GetTimeSinceColliderInactive() //räknar hur lång tid det gått sedan attackArea sattes inaktiv
+    {
+        return Time.time - colliderInactiveTime;
     }
 }

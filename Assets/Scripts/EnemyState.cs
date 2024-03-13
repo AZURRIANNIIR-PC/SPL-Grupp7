@@ -36,14 +36,15 @@ public class EnemyState : MonoBehaviour
     {
         Debug.Log("Enemy is dead!");
         animator.SetBool("IsDead", true);
-        rb.isKinematic = true; //stänger av rigidBody
-        GetComponent<BoxCollider2D>().enabled = false; //då faller gubben genom marken lol
+        rb.isKinematic = true; //stänger av rigidBody, annars kommer fienden falla genom världen när dens collider tas bort
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponentInChildren<EnemyAttackTrigger>().enabled = false;
         GetComponentInChildren<AttackArea>().enabled = false;
-        harmfulScript.enabled = false;
-        Invoke("DestroyGameObject", 1f);
+        harmfulScript.enabled = false; //av ngn anledning funkar den här inte? man blir skadad ändå ifall man går in i fienden
+        //Invoke("DestroyGameObject", 1f);
     }
 
-    private void DestroyGameObject()
+    private void DestroyGameObject() //om man vill att fiendens lik ska försvinna, ej ligga kvar
     {
         Destroy(gameObject);
     }
