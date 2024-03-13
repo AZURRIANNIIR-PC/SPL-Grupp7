@@ -6,6 +6,7 @@ public class PlayerState : MonoBehaviour
 {
     public int healthPoints = 6;
     public int initialHealthPoints = 6;
+    public int foodAmount = 0;
 
     private Animator animator;
     //private bool isDead = false;
@@ -36,8 +37,8 @@ public class PlayerState : MonoBehaviour
         }
         //else
         //{
-            //animator.SetTrigger("isHurt");
-            //Invoke("stopHurtAnimation", 0.4f);
+        //animator.SetTrigger("isHurt");
+        //Invoke("stopHurtAnimation", 0.4f);
         //}
     }
 
@@ -52,4 +53,10 @@ public class PlayerState : MonoBehaviour
     {
         respawnPosition = newRespawnPosition;
     }
+
+    public void FoodPickup()
+    {
+        foodAmount++;
+    }
 }
+

@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Questgiver : MonoBehaviour {
+public class Questgiver : MonoBehaviour
+{
     [SerializeField] private GameObject textparent;
     [SerializeField] private Text text;
     [SerializeField] private string questBeginText;
@@ -11,21 +10,38 @@ public class Questgiver : MonoBehaviour {
     [SerializeField] private GameObject doorToOpenWhenQuestIsComplete;
     //[SerializeField] private AudioSource audioS;
     //[SerializeField] private AudioClip clip;
+    // public PickUpFood pickUpFood;
     private bool questCompleted = false;
+    private int amountToCollect = 1;
 
-    void Start() {
+    void Start()
+    {
         textparent.SetActive(false); // Gör texten osynlig
         text.text = questBeginText; //Sätt texten till urspungliga
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("Player") == true) { //Om spelaren integrerar
-            if (questCompleted) {
-                text.text = questCompleteText;
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") == true)
+        { //Om spelaren integrerar
+
+            if (collision.GetComponent<PlayerState>().foodAmount >= amountToCollect)
+            {
+                questCompleted = true;
+                Debug.Log("quest complete now true");
+            }
+            if (questCompleted)
+            {
                 Debug.Log("uppdraget slutfört");
+                text.text = questCompleteText;
+
                 //doorToOpenWhenQuestIsComplete.SetActive(false);
             }
-        } else {
+        }
+        else
+        {
             text.text = questBeginText;
             Debug.Log("text synlig");
         }
@@ -33,10 +49,13 @@ public class Questgiver : MonoBehaviour {
         //audioS.PlayOneShot(clip);
     }
 
-    private void OnTriggerExit2D(Collider2D collision) {
-        if (collision.CompareTag("Player") == true) {
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") == true)
+        {
             textparent.SetActive(false);
             Debug.Log("text försvinner");
         }
     }
 }
+
