@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03e49d9c068974a03abdb3c12239d5f3
+guid: 32dc050caca1b0941b0e036001783d69
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,9 +9,8 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Golden Age
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 998fc72ce500f460c973aac0302e186a, type: 3}
+  - iFlash 705
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 2
   ascentCalculationMode: 1
