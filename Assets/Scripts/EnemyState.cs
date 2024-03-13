@@ -39,7 +39,7 @@ public class EnemyState : MonoBehaviour
         rb.isKinematic = true; //stänger av rigidBody, annars kommer fienden falla genom världen när dens collider tas bort
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponentInChildren<EnemyAttackTrigger>().enabled = false;
-        GetComponentInChildren<AttackArea>().enabled = false;
+        //GetComponentInChildren<AttackArea>().enabled = false;
         harmfulScript.enabled = false; //av ngn anledning funkar den här inte? man blir skadad ändå ifall man går in i fienden
         //Invoke("DestroyGameObject", 1f);
     }
