@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Settings_Controller : MonoBehaviour {
     [SerializeField] private GameObject settingsPanel;
@@ -36,9 +35,5 @@ public class Settings_Controller : MonoBehaviour {
 
         //Aktivera spelarens kontroller:
         playerMovement.enabled = true; 
-    }
-
-    public void ReturnToMainMenu() {
-        SceneManager.LoadScene(0);
     }
 }

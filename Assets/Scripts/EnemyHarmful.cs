@@ -6,7 +6,7 @@ public class EnemyHarmful : MonoBehaviour
 {
     public int damage = 2;
 
-    //spelaren skadas av att gå in i fienden
+    //öhh prövar o ändra ngt här tjohej
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") == true)

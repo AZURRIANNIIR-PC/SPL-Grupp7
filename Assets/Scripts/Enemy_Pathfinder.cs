@@ -19,7 +19,7 @@ public class Enemy_Pathfinder : MonoBehaviour {
     private bool isPlayerClose = false;
     [SerializeField] private BoxCollider2D returnPointCollider;
 
-    [SerializeField] private Animator animator;
+    //[SerializeField] private Animator animator;
     [SerializeField] private bool isAlive = true;
     [SerializeField] private AudioSource audioS;
     [SerializeField] private AudioClip clip;
@@ -31,7 +31,7 @@ public class Enemy_Pathfinder : MonoBehaviour {
         isAlive = true;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        animator = gameObject.GetComponent<Animator>();
+        //animator = gameObject.GetComponent<Animator>();
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
         //Startpositionen är där vi befinner oss, slutdestinationen är där target befinner sig, funktionen skapar vi
@@ -39,7 +39,7 @@ public class Enemy_Pathfinder : MonoBehaviour {
 
     private void Update() {
         //animator.SetBool("IsAlive", isAlive);
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        //animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 
     private void OnPathComplete(Path p) {
