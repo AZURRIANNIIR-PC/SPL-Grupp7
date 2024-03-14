@@ -28,9 +28,9 @@ public class Marriage_Controller : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) { //När spelaren kommer inom collidern
         if (collision.CompareTag("Player") == true) {
             Debug.Log("Marriagezone entered");
-            playerMovement.enabled = false;
+            //playerMovement.enabled = false;
             playerTransform.position = playerNewPosition.position; //Flyttar spelaren till rätt plats
-
+            playerMovement.enabled = false;
             //Kollar om spelaren rör sig in
             if (Input.GetAxisRaw("Horizontal") != 0) {
                 // Om spelaren håller ner höger pil så stanna den
