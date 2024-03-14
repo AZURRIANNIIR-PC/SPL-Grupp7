@@ -64,7 +64,7 @@ public class KnowledgeChecker : MonoBehaviour
         text.text = rightAnswerResponse;
         hasAnswered = true;
         answeredRight = true;
-        totalCorrectAnswers++; //denna funkar ej helt
+        totalCorrectAnswers = totalCorrectAnswers + 1; //denna funkar ej helt
 
         button1.interactable = false;
         button2.interactable = false;
