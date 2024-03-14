@@ -9,7 +9,7 @@ public class Player_Movement : MonoBehaviour {
     [SerializeField] private Transform groundCheck; //Kollar om spelaren är på marken eller inte
     [SerializeField] private LayerMask groundMask; //Vad tolkas som mark?
     private Rigidbody2D rigidBody2D;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;
     private bool isFacingRight = true;
@@ -38,7 +38,13 @@ public class Player_Movement : MonoBehaviour {
 
         //Spelarens rörelse
         float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        //rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        if (moveInput == 0) { //Om man inte trycker ner nått får spelaren ingen fart
+            rb.velocity = new Vector2(0f, rb.velocity.y);
+        }
+        else {
+            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        }
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
 
         //Hopp
