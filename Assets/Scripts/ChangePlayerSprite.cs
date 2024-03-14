@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
+using UnityEngine.Animations;
 using UnityEngine;
 
 public class ChangePlayerSprite : MonoBehaviour
@@ -35,7 +36,7 @@ public class ChangePlayerSprite : MonoBehaviour
     {
         if (collision.CompareTag("Player") == true)
         {
-            //göra så collidern blir "hård", så spelaren ej kan gå tbx?
+            //gï¿½ra sï¿½ collidern blir "hï¿½rd", sï¿½ spelaren ej kan gï¿½ tbx?
         }
     }
 }
