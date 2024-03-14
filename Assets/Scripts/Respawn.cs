@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Respawn : MonoBehaviour
-{
-   // [SerializeField] private GameObject startPosition;
-    public GameObject respawnPosition;
+public class Respawn : MonoBehaviour {
+    // [SerializeField] private GameObject startPosition;
 
-    public void PlayerRespawn()
-    {
+    [SerializeField] private GameObject respawnPosition;
+    [SerializeField] private GameObject newRespawnPosition;
+    private int amountToCollect = 1;
+
+    public void PlayerRespawn() {
+        if (GetComponent<PlayerState>().foodAmount >= amountToCollect) {
+            NewRespawn();
+        }
         Debug.Log("Respawning player");
         gameObject.transform.position = respawnPosition.transform.position;
+    }
+
+    void NewRespawn() {
+        respawnPosition = newRespawnPosition;
     }
 }
