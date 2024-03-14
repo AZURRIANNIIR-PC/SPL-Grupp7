@@ -14,6 +14,9 @@ public class Marriage_Controller : MonoBehaviour {
     [SerializeField] private Transform brideTransform;
     [SerializeField] private float moveSpeed = 2f;
 
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
+
     [SerializeField] private GameObject textParent;
     [SerializeField] private Text priestTextBubble; 
     [SerializeField] private string[] priestText; // Array med conversations-fraser
@@ -28,17 +31,28 @@ public class Marriage_Controller : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) { //När spelaren kommer inom collidern
         if (collision.CompareTag("Player") == true) {
             Debug.Log("Marriagezone entered");
-            //playerMovement.enabled = false;
+
             playerTransform.position = playerNewPosition.position; //Flyttar spelaren till rätt plats
             playerMovement.enabled = false;
+
             //Kollar om spelaren rör sig in
             if (Input.GetAxisRaw("Horizontal") != 0) {
                 // Om spelaren håller ner höger pil så stanna den
                 playerMovement.rb.velocity = new Vector2(0f, playerMovement.rb.velocity.y);
             }
 
+            PlayAudio();
             StartCoroutine(Vows()); //Börja konversationen
         }
+    }
+
+    private void PlayAudio() {
+        // Stop all currently playing AudioSources
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource source in allAudioSources) {
+            source.Stop();
+        }
+        audioSource.PlayOneShot(audioClip);
     }
 
     IEnumerator Vows() {
