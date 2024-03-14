@@ -8,6 +8,11 @@ public class PickUpFood : MonoBehaviour
     public int foodAmount = 0;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+    private void Start()
+    {
+        Debug.Log("food amount is" + foodAmount);
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,14 +21,17 @@ public class PickUpFood : MonoBehaviour
             collision.GetComponent<PlayerState>().FoodPickup();
             spriteRenderer.enabled = false;
             foodAmount++;
+         
 
-            // pickedUpFood = true;
+           
 
             DestroyFood();
 
 
         }
     }
+
+    
     void DestroyFood()
     {
 

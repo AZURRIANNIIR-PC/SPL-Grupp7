@@ -67,11 +67,7 @@ public class FieldOfView : MonoBehaviour
                 KillPlayer();
             }
 
-            // kolla vad raycasten träffar för debug
-            if (raycastHit2D.collider != null)
-            {
-                Debug.Log("Ray hit: " + raycastHit2D.collider.gameObject.name + " at position: " + raycastHit2D.point);
-            }
+            
 
             if (raycastHit2D.collider == null)
             {
