@@ -14286,6 +14286,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016369351}
   m_CullTransparentMesh: 1
+--- !u!1 &2044183735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044183737}
+  - component: {fileID: 2044183736}
+  - component: {fileID: 2044183738}
+  m_Layer: 0
+  m_Name: SwitchSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2044183736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044183735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb3e7ec1db99be4f82401df4c4ce67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grownUpSprite: {fileID: -1404507050, guid: e4ac48c2120e34eb9a0b95b6e57657b3, type: 3}
+  grownUpAnimatorController: {fileID: 9100000, guid: 2d6ea42bf89694e86a4143c0025bc2f3, type: 2}
+--- !u!4 &2044183737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044183735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.62, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2044183738
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044183735}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 2}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &2079562231
 GameObject:
   m_ObjectHideFlags: 0
@@ -14905,6 +14978,10 @@ PrefabInstance:
       propertyPath: respawnPosition
       value: 
       objectReference: {fileID: 833846240}
+    - target: {fileID: 7924221758336360609, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: baefc48c6074b4d6b8a1923959d0425c, type: 2}
     - target: {fileID: 7924221758336360612, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14948,6 +15025,26 @@ PrefabInstance:
     - target: {fileID: 7924221758336360612, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924221758336360613, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 763598684, guid: 8247a8d2955074bf5a838894426dcb2b, type: 3}
+    - target: {fileID: 7924221758336360614, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924221758336360614, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924221758336360614, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924221758336360614, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.96875
       objectReference: {fileID: 0}
     - target: {fileID: 7924221758336360619, guid: 252c89e76959a4eea823b72fd057084e, type: 3}
       propertyPath: m_Name

@@ -12,13 +12,13 @@ public class KnowledgeChecker : MonoBehaviour
     [SerializeField] private Button button2;
     private bool hasAnswered = false;
     private bool answeredRight;
-    private int totalCorrectAnswers = 0;
+    //private int totalCorrectAnswers = 0; //denna bortkommenterars rn för vi skiter för stunden i flera slut
 
     void Start()
     {
         questionParent.SetActive(false); // Gör texten osynlig
         text.text = questionText; //Sätt texten till urspungliga
-        Debug.Log("in start: " + totalCorrectAnswers);
+        //Debug.Log("in start: " + totalCorrectAnswers);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -64,11 +64,11 @@ public class KnowledgeChecker : MonoBehaviour
         text.text = rightAnswerResponse;
         hasAnswered = true;
         answeredRight = true;
-        totalCorrectAnswers = totalCorrectAnswers + 1; //denna funkar ej helt
+        //totalCorrectAnswers = totalCorrectAnswers + 1; //denna funkar ej helt
 
         button1.interactable = false;
         button2.interactable = false;
-        Debug.Log("in answeredCorreclty: " + totalCorrectAnswers);
+        //Debug.Log("in answeredCorreclty: " + totalCorrectAnswers);
     }
 
     public void AnsweredWrong()
@@ -79,11 +79,11 @@ public class KnowledgeChecker : MonoBehaviour
 
         button1.interactable = false;
         button2.interactable = false;
-        Debug.Log("in answeredWrong: " + totalCorrectAnswers);
+        //Debug.Log("in answeredWrong: " + totalCorrectAnswers);
     }
 
-    public int getTotalCorrectAnswers() //för i slutet, när man från ett annat script ska checka hur bra spelaren gjorde
-    {
-        return totalCorrectAnswers;
-    }
+    //public int getTotalCorrectAnswers() //för i slutet, när man från ett annat script ska checka hur bra spelaren gjorde
+    //{
+    //    return totalCorrectAnswers;
+    //}
 }

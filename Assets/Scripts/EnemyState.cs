@@ -41,7 +41,9 @@ public class EnemyState : MonoBehaviour
         GetComponentInChildren<EnemyAttackTrigger>().enabled = false;
         //GetComponentInChildren<AttackArea>().enabled = false;
         harmfulScript.enabled = false; //av ngn anledning funkar den här inte? man blir skadad ändå ifall man går in i fienden
-        //Invoke("DestroyGameObject", 1f);
+                                       //Invoke("DestroyGameObject", 1f);
+
+        PlayerPrefs.SetInt("isDead", 1); //ifall död = 1, ifall levande = 0
     }
 
     private void DestroyGameObject() //om man vill att fiendens lik ska försvinna, ej ligga kvar
