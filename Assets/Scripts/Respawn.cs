@@ -5,24 +5,11 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
    // [SerializeField] private GameObject startPosition;
-    
-    [SerializeField] private GameObject respawnPosition;
-    [SerializeField] private GameObject newRespawnPosition;
-    private int amountToCollect = 1;
+    public GameObject respawnPosition;
 
     public void PlayerRespawn()
     {
-        if (GetComponent<PlayerState>().foodAmount >= amountToCollect)
-        {
-            NewRespawn();
-        }
-            Debug.Log("Respawning player");
+        Debug.Log("Respawning player");
         gameObject.transform.position = respawnPosition.transform.position;
-        
-    }
-
-    void NewRespawn()
-    {
-        respawnPosition = newRespawnPosition;
     }
 }
