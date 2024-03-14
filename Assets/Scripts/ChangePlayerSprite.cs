@@ -8,15 +8,12 @@ public class ChangePlayerSprite : MonoBehaviour
 {
     [SerializeField] private Sprite grownUpSprite;
     [SerializeField] private AnimatorController grownUpAnimatorController;
-    //[SerializeField] private Collider2D childCollider;
-    //[SerializeField] private Collider2D grownUpCollider;
     private Animator animator;
     GameObject player;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        //grownUpCollider.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,9 +23,6 @@ public class ChangePlayerSprite : MonoBehaviour
             player.GetComponent<SpriteRenderer>().sprite = grownUpSprite;
             animator = player.GetComponent<Animator>();
             animator.runtimeAnimatorController = grownUpAnimatorController;
-
-            //childCollider.enabled = false;
-            //grownUpCollider.enabled = true;
         }
     }
 
