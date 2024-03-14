@@ -26,7 +26,7 @@ public class KitharaObject : MonoBehaviour
         kitharaText.SetActive(false);
 
         playerMovementScript = GameObject.FindObjectOfType<Player_Movement>();
-        //volumeSettings= GameObject.FindObjectOfType<VolumeSettings>();
+        volumeSettings= GameObject.FindObjectOfType<VolumeSettings>();
     }
 
     private void Update()
