@@ -9,84 +9,84 @@ public class FieldOfView : MonoBehaviour
    private float fieldOfView;
    private Vector3 origin;
    private float startingAngle;
-   private float rotationAngle = 0f; // för att hålla reda på rotationsvärde
-   public float verticalOffset = 2f; // detta så att synfältet börjar på vaktens ögonnivå, dock det verkar som att flytta gameobject i scenen är effektivare
+   private float rotationAngle = 0f; // fï¿½r att hï¿½lla reda pï¿½ rotationsvï¿½rde
+   public float verticalOffset = 2f; // detta sï¿½ att synfï¿½ltet bï¿½rjar pï¿½ vaktens ï¿½gonnivï¿½, dock det verkar som att flytta gameobject i scenen ï¿½r effektivare
    public Respawn respawn;
 
     private void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-        fieldOfView = 12f; // också ett värde för field of view som kan justeras, behövde flytta upp för att andra metoder ska funka
+        fieldOfView = 12f; // ocksï¿½ ett vï¿½rde fï¿½r field of view som kan justeras, behï¿½vde flytta upp fï¿½r att andra metoder ska funka
         origin = Vector3.zero;
-        // startingAngle behöver rikta åt andra hållet
+        // startingAngle behï¿½ver rikta ï¿½t andra hï¿½llet
         startingAngle += 180f;
 
         // Get the Respawn component attached to the player
         respawn = FindObjectOfType<Respawn>();
         if (respawn == null)
         {
-            Debug.LogError("Respawn component not found!");
+            //Debug.LogError("Respawn component not found!");
         }
 
     }
 
     private void Update()
     { 
-        //värden för field of view
+        //vï¿½rden fï¿½r field of view
         int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = fieldOfView / rayCount;
         float viewDistance = 25f;
 
-        // våra rays består av vertiser, vilket vi skapar här nedan
-        // vår original vertis räknas som 1, sedan behöver vi för en triangel skapa en vertis vid 90, 45 och 0 grader = 4
-        // rayCount här, räknar bara vertisen på 90 och 45 grader, inte den på 0 grader och original vertisen, därför står det inte bara 4 istället för rayCount + 1 +1
+        // vï¿½ra rays bestï¿½r av vertiser, vilket vi skapar hï¿½r nedan
+        // vï¿½r original vertis rï¿½knas som 1, sedan behï¿½ver vi fï¿½r en triangel skapa en vertis vid 90, 45 och 0 grader = 4
+        // rayCount hï¿½r, rï¿½knar bara vertisen pï¿½ 90 och 45 grader, inte den pï¿½ 0 grader och original vertisen, dï¿½rfï¿½r stï¿½r det inte bara 4 istï¿½llet fï¿½r rayCount + 1 +1
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
 
-        // vår uv ska ha samma sak så vi kan hämta våra värden från vertiserna för att hitta rätt längd
+        // vï¿½r uv ska ha samma sak sï¿½ vi kan hï¿½mta vï¿½ra vï¿½rden frï¿½n vertiserna fï¿½r att hitta rï¿½tt lï¿½ngd
         Vector2[] uv = new Vector2[vertices.Length];
 
-        // det ska va samma mängd trianglar som våra rays,
+        // det ska va samma mï¿½ngd trianglar som vï¿½ra rays,
         int[] triangles = new int[rayCount * 3];
 
         vertices[0] = origin;
 
-        // gå igenom alla rays och lägg placera vertiser på rätt position
+        // gï¿½ igenom alla rays och lï¿½gg placera vertiser pï¿½ rï¿½tt position
         int vertexIndex = 1;
         int triangleIndex = 0;
         for (int i = 0; i <= rayCount; i++)
         {
             Vector3 vertex;
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
-            // If-satsen kollar efter kollisioner mellan synfätet och omvärlden, och anpassar synfätet utefter detta
+            // If-satsen kollar efter kollisioner mellan synfï¿½tet och omvï¿½rlden, och anpassar synfï¿½tet utefter detta
 
             if (raycastHit2D.collider != null && raycastHit2D.collider.CompareTag("Player"))
             {
-                Debug.Log("Player detected in field of view!");
+                //Debug.Log("Player detected in field of view!");
                 KillPlayer();
             }
 
-            // kolla vad raycasten träffar för debug
+            // kolla vad raycasten trï¿½ffar fï¿½r debug
             if (raycastHit2D.collider != null)
             {
-                Debug.Log("Ray hit: " + raycastHit2D.collider.gameObject.name + " at position: " + raycastHit2D.point);
+                //Debug.Log("Ray hit: " + raycastHit2D.collider.gameObject.name + " at position: " + raycastHit2D.point);
             }
 
             if (raycastHit2D.collider == null)
             {
-                // om det inte träffar något sätts vertisen där den va på maximala distansen
+                // om det inte trï¿½ffar nï¿½got sï¿½tts vertisen dï¿½r den va pï¿½ maximala distansen
                 vertex = origin + GetVectorFromAngle(angle) * viewDistance;
             } else {
-                // om den träffar något sätter vi vertisen på den punkt där det kolliderade
+                // om den trï¿½ffar nï¿½got sï¿½tter vi vertisen pï¿½ den punkt dï¿½r det kolliderade
                 vertex = raycastHit2D.point;
             }
             vertices[vertexIndex] = vertex;
 
-            //detta kommer skapa triangeln baserat på vertiserna, om  i > 0, för att detta inte kan köras på den första ray:n då den inte han en vertis att koppla till
+            //detta kommer skapa triangeln baserat pï¿½ vertiserna, om  i > 0, fï¿½r att detta inte kan kï¿½ras pï¿½ den fï¿½rsta ray:n dï¿½ den inte han en vertis att koppla till
             if (i > 0)
             {
-                triangles[triangleIndex + 0] = 0; // vertisen på origin
+                triangles[triangleIndex + 0] = 0; // vertisen pï¿½ origin
                 triangles[triangleIndex + 1] = vertexIndex - 1; // vertisen innan
                 triangles[triangleIndex + 2] = vertexIndex; // den nuvarande vertisen
 
@@ -111,12 +111,12 @@ public class FieldOfView : MonoBehaviour
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
-        // sätter vinkeln enligt den önskade rotationen
+        // sï¿½tter vinkeln enligt den ï¿½nskade rotationen
         SetRotationAngle(rotationAngle);
 
     }
 
-    // Metod för att sätta rotationsvärdet och riktning
+    // Metod fï¿½r att sï¿½tta rotationsvï¿½rdet och riktning
     public void SetRotationAngle(float angle)
     {
         startingAngle = angle + 180f;
@@ -131,7 +131,7 @@ static Vector3 GetVectorFromAngle(float angle)
 
     }
 
-    //följande tar en vector3 och returnerar en float
+    //fï¿½ljande tar en vector3 och returnerar en float
     static float GetAngleFromVectorFloat(Vector3 direction)
     {
         direction = direction.normalized;
@@ -140,7 +140,7 @@ static Vector3 GetVectorFromAngle(float angle)
         return n;
     }
 
-    // set origin med den vertikala ofsetten inräknad så den inte missar vissa obstacles i banan
+    // set origin med den vertikala ofsetten inrï¿½knad sï¿½ den inte missar vissa obstacles i banan
     public void SetOrigin(Vector3 origin)
     {
         this.origin = origin + Vector3.up * verticalOffset;
@@ -152,14 +152,14 @@ static Vector3 GetVectorFromAngle(float angle)
 
     private void KillPlayer()
     {
-        // trigga spelardöd och respawn
+        // trigga spelardï¿½d och respawn
         if (respawn != null)
         {
             respawn.PlayerRespawn();
         }
         else
         {
-            Debug.LogError("Respawn component is missing!");
+            //Debug.LogError("Respawn component is missing!");
         }
     }
 
