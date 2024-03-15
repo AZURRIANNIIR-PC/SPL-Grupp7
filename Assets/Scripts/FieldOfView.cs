@@ -150,7 +150,7 @@ static Vector3 GetVectorFromAngle(float angle)
         startingAngle = GetAngleFromVectorFloat(aimDirection) - fieldOfView / 2f;
     }
 
-    private void KillPlayer()
+    public void KillPlayer()
     {
         // trigga spelard�d och respawn
         if (respawn != null)

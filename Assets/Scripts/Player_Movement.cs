@@ -15,6 +15,10 @@ public class Player_Movement : MonoBehaviour {
     private bool isFacingRight = true;
 
     [SerializeField] private GameController gameController;
+    [SerializeField] private FieldOfView fieldOfView;
+
+    private bool isAtEnd;
+    [SerializeField] private GameObject startPoint;
 
     //attackera
     //private GameObject AttackArea = default;
@@ -34,6 +38,7 @@ public class Player_Movement : MonoBehaviour {
         attackArea.gameObject.SetActive(false);
 
         gameController = FindObjectOfType<GameController>();
+
         if (gameController.GetPosition() != null) {
             transform.position = gameController.GetPosition(); //Sätter positionen till den sparade
             Debug.Log("uppdaterar pos");
@@ -42,6 +47,12 @@ public class Player_Movement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (isAtEnd) {
+            transform.position = startPoint.transform.position;
+            isAtEnd = false;
+            Debug.Log("isAtEnd resettar");
+        }
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundMask); //Kollar om spelaren är på marken
 
         //Spelarens rörelse
@@ -115,5 +126,9 @@ public class Player_Movement : MonoBehaviour {
 
     public void SavePositionOnExit() { //Kallas på innan spelet avslutas för att spara
         gameController.SavePosition(transform.position);
+    }
+
+    public void SetIsAtEnd(bool hasFinishedGame) {
+        isAtEnd = hasFinishedGame;
     }
 }

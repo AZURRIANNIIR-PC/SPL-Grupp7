@@ -9,5 +9,7 @@ public class MainMenu_StartGame : MonoBehaviour {
     public void StartGame() {
         playerMovement.enabled = true;
         SceneManager.LoadScene(1);
+
+        playerMovement.SetIsAtEnd(true);
     }
 }

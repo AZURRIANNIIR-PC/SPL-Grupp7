@@ -10,6 +10,7 @@ public class MainMenu_Loader : MonoBehaviour {
         if(collision.CompareTag("Player") == true) {
             SceneManager.LoadScene(3);
             playerMovement.SavePositionOnExit();
+            playerMovement.SetIsAtEnd(true);
         }
     }
 
