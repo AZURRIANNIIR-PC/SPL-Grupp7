@@ -17,7 +17,7 @@ public class Player_Movement : MonoBehaviour {
     [SerializeField] private GameController gameController;
     [SerializeField] private FieldOfView fieldOfView;
 
-    private bool isAtEnd;
+    //private bool isAtEnd;
     [SerializeField] private GameObject startPoint;
 
     //attackera
@@ -39,19 +39,14 @@ public class Player_Movement : MonoBehaviour {
 
         gameController = FindObjectOfType<GameController>();
 
-        if (gameController.GetPosition() != null) {
-            transform.position = gameController.GetPosition(); //Sätter positionen till den sparade
-            Debug.Log("uppdaterar pos");
-        }
+        //transform.position = gameController.GetPosition(); //Sätter positionen till den sparade
     }
 
     // Update is called once per frame
     void Update() {
-        if (isAtEnd) {
-            transform.position = startPoint.transform.position;
-            isAtEnd = false;
-            Debug.Log("isAtEnd resettar");
-        }
+        //Uppdatera spelarens sparade position
+        //this.transform.position = gameController.GetPosition();
+        //Debug.Log("Startpoint updated to: " + startPoint.transform.position);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundMask); //Kollar om spelaren är på marken
 
@@ -124,11 +119,11 @@ public class Player_Movement : MonoBehaviour {
         return false;
     }
 
-    public void SavePositionOnExit() { //Kallas på innan spelet avslutas för att spara
-        gameController.SavePosition(transform.position);
-    }
+    //public void SavePositionOnExit() { //Kallas på innan spelet avslutas för att spara
+    //    gameController.SavePosition(transform.position);
+    //}
 
-    public void SetIsAtEnd(bool hasFinishedGame) {
-        isAtEnd = hasFinishedGame;
-    }
+    //public void SetIsAtEnd(bool hasFinishedGame) {
+    //    isAtEnd = hasFinishedGame;
+    //}
 }
