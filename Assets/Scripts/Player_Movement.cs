@@ -14,6 +14,8 @@ public class Player_Movement : MonoBehaviour {
     private bool isGrounded;
     private bool isFacingRight = true;
 
+    [SerializeField] private GameController gameController;
+
     //attackera
     //private GameObject AttackArea = default;
     private AttackArea attackArea;
@@ -30,6 +32,12 @@ public class Player_Movement : MonoBehaviour {
         //AttackArea = transform.GetChild(0).gameObject;
         attackArea = gameObject.GetComponentInChildren<AttackArea>();
         attackArea.gameObject.SetActive(false);
+
+        gameController = FindObjectOfType<GameController>();
+        if (gameController.GetPosition() != null) {
+            transform.position = gameController.GetPosition(); //Sätter positionen till den sparade
+            Debug.Log("uppdaterar pos");
+        }
     }
 
     // Update is called once per frame
@@ -103,5 +111,9 @@ public class Player_Movement : MonoBehaviour {
             return true;
         }
         return false;
+    }
+
+    public void SavePositionOnExit() { //Kallas på innan spelet avslutas för att spara
+        gameController.SavePosition(transform.position);
     }
 }

@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu_StartGame : MonoBehaviour {
-    [SerializeField] private GameObject gameObject;
+    [SerializeField] private Player_Movement playerMovement;
 
     public void StartGame() {
+        playerMovement.enabled = true;
         SceneManager.LoadScene(1);
     }
 }

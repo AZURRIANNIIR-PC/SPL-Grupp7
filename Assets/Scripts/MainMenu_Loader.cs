@@ -4,14 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu_Loader : MonoBehaviour {
-    private void OnTriggerEnter2D(Collider2D collision) {
+    [SerializeField] private Player_Movement playerMovement;
+
+    private void OnTriggerEnter2D(Collider2D collision) { //När spelaren kommer till slutet av banan
         if(collision.CompareTag("Player") == true) {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
+            playerMovement.SavePositionOnExit();
         }
     }
 
-    public void LoadMainMenu()
-    {
+    public void LoadMainMenu() {
         SceneManager.LoadScene(0);
     }
 }

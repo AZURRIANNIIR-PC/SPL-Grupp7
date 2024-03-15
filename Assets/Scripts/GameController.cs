@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-    [SerializeField] private float x, y, z;
+    [SerializeField] private Vector3 playerPosition;
+    private const string PlayerPositionKey = "PlayerPosition";
 
-    public void Save() {
-        x = transform.position.x;
-        y = transform.position.y;
-        z = transform.position.z;
-
-        PlayerPrefs.SetFloat("x", x);
-        PlayerPrefs.SetFloat("y", y);
-        PlayerPrefs.SetFloat("z", z);
+    public void SavePosition(Vector3 position) {
+        playerPosition = position;
+        PlayerPrefs.SetFloat(PlayerPositionKey + "_x", playerPosition.x);
+        PlayerPrefs.SetFloat(PlayerPositionKey + "_y", playerPosition.y);
+        PlayerPrefs.SetFloat(PlayerPositionKey + "_z", playerPosition.z);
+        PlayerPrefs.Save();
+        Debug.Log("Saved player position: " + playerPosition);
     }
 
-    public void Load() {
-        PlayerPrefs.GetFloat("x", x);
-        PlayerPrefs.GetFloat("y", y);
-        PlayerPrefs.GetFloat("z", z);
+    public Vector3 GetPosition() {
+        float savedX = PlayerPrefs.GetFloat(PlayerPositionKey + "_x", 0.0f);
+        float savedY = PlayerPrefs.GetFloat(PlayerPositionKey + "_y", 0.0f);
+        float savedZ = PlayerPrefs.GetFloat(PlayerPositionKey + "_z", 0.0f);
 
-        Vector3 loadPosition = new Vector3(x, y, z);
-        transform.position = loadPosition;
-;    }
+        return new Vector3(savedX, savedY, savedZ);
+    }
 }

@@ -21,7 +21,6 @@ public class Settings_Controller : MonoBehaviour {
     }
 
     public void OpenSettings() {
-        Debug.Log("opens settings");
         Time.timeScale = 0f; //Pausar spelet
 
         settingsPanel.SetActive(true); //Gör settingsPanel synlig
@@ -40,5 +39,12 @@ public class Settings_Controller : MonoBehaviour {
 
     public void ReturnToMainMenu() {
         SceneManager.LoadScene(0);
+    }
+
+    public void OnRestartButtonClicked() {
+        // Här skulle man kunna ha en confirmation-prompt
+
+        PlayerPrefs.DeleteAll();
+        Debug.Log("PlayerPrefs cleared.");
     }
 }
