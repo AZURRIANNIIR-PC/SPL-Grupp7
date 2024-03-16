@@ -38,16 +38,10 @@ public class Player_Movement : MonoBehaviour {
         attackArea.gameObject.SetActive(false);
 
         gameController = FindObjectOfType<GameController>();
-
-        //transform.position = gameController.GetPosition(); //Sätter positionen till den sparade
     }
 
     // Update is called once per frame
     void Update() {
-        //Uppdatera spelarens sparade position
-        //this.transform.position = gameController.GetPosition();
-        //Debug.Log("Startpoint updated to: " + startPoint.transform.position);
-
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundMask); //Kollar om spelaren är på marken
 
         //Spelarens rörelse
@@ -119,11 +113,11 @@ public class Player_Movement : MonoBehaviour {
         return false;
     }
 
-    //public void SavePositionOnExit() { //Kallas på innan spelet avslutas för att spara
-    //    gameController.SavePosition(transform.position);
-    //}
+    public void OnLevelWasLoaded(int level) {
+        this.transform.position = gameController.GetPosition();
+    }
 
-    //public void SetIsAtEnd(bool hasFinishedGame) {
-    //    isAtEnd = hasFinishedGame;
-    //}
+    public Vector3 GetStartPos() {
+        return startPoint.transform.position;
+    }
 }

@@ -1839,6 +1839,14 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 2324648873064909632, guid: a778d903554ce42a98db7104aa017bbf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 302
+      objectReference: {fileID: 0}
+    - target: {fileID: 2324648873064909632, guid: a778d903554ce42a98db7104aa017bbf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 2324648873064909644, guid: a778d903554ce42a98db7104aa017bbf, type: 3}
       propertyPath: playerMovement
       value: 
