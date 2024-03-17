@@ -10,7 +10,13 @@ public class CheckPoint : MonoBehaviour
         if (collision.CompareTag("Player") == true)
         {
             collision.GetComponent<PlayerState>().ChangeRespawnPosition(gameObject);
+
+            //spara namnet på restartPositionen
+            SaveGame.SaveRespawnPosition(gameObject.name);
+            Debug.Log(name + "is saved");
+
             gameObject.GetComponent<SpriteRenderer>().sprite = checkPointUnlocked;
+            Debug.Log("Checkpoint taken");
         }
     }
 }

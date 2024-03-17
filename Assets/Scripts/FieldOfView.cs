@@ -11,7 +11,9 @@ public class FieldOfView : MonoBehaviour
    private float startingAngle;
    private float rotationAngle = 0f; // f�r att h�lla reda p� rotationsv�rde
    public float verticalOffset = 2f; // detta s� att synf�ltet b�rjar p� vaktens �gonniv�, dock det verkar som att flytta gameobject i scenen �r effektivare
-   public Respawn respawn;
+   
+   //public Respawn respawn;
+    public PlayerState playerState;
 
     private void Start()
     {
@@ -23,8 +25,8 @@ public class FieldOfView : MonoBehaviour
         startingAngle += 180f;
 
         // Get the Respawn component attached to the player
-        respawn = FindObjectOfType<Respawn>();
-        if (respawn == null)
+       // respawn = FindObjectOfType<Respawn>();
+        //if (respawn == null)
         {
             //Debug.LogError("Respawn component not found!");
         }
@@ -61,11 +63,18 @@ public class FieldOfView : MonoBehaviour
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
             // If-satsen kollar efter kollisioner mellan synf�tet och omv�rlden, och anpassar synf�tet utefter detta
 
+            //döda spelaren vid kontakt med rays
             if (raycastHit2D.collider != null && raycastHit2D.collider.CompareTag("Player"))
             {
+                //playerState.doHarm(damage);
                 //Debug.Log("Player detected in field of view!");
                 KillPlayer();
             }
+            
+            
+
+
+
 
             // kolla vad raycasten tr�ffar f�r debug
             if (raycastHit2D.collider != null)
@@ -140,7 +149,7 @@ static Vector3 GetVectorFromAngle(float angle)
         return n;
     }
 
-    // set origin med den vertikala ofsetten inr�knad s� den inte missar vissa obstacles i banan
+    // set origin med den vertikala ofsetten inräknad så den inte missar vissa obstacles i banan
     public void SetOrigin(Vector3 origin)
     {
         this.origin = origin + Vector3.up * verticalOffset;
@@ -152,15 +161,12 @@ static Vector3 GetVectorFromAngle(float angle)
 
     public void KillPlayer()
     {
-        // trigga spelard�d och respawn
-        if (respawn != null)
+        PlayerState playerState = FindObjectOfType<PlayerState>();
+        if (playerState != null)
         {
-            respawn.PlayerRespawn();
+            playerState.Respawn();
         }
-        else
-        {
-            //Debug.LogError("Respawn component is missing!");
-        }
+        
     }
 
 }

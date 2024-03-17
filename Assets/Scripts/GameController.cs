@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour {
         float savedY = PlayerPrefs.GetFloat(PlayerPositionKey + "_y", 0.0f);
         float savedZ = PlayerPrefs.GetFloat(PlayerPositionKey + "_z", 0.0f);
 
-        return new Vector3(savedX, savedY, savedZ);
+        return new Vector3 (savedX, savedY, savedZ);
     }
 
     private void SavePosition() {
