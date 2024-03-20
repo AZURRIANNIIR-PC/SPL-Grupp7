@@ -1,3 +1,7 @@
+//Adin Farid, adfa8505
+//Linn Li, lili6794
+//Nora Wennerberg, nowe9092
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,14 +41,14 @@ public class KitharaObject : MonoBehaviour
             {
                 kitharaCloseUp.SetActive(true);
                 closeUpActivated = true;
-                //stänga av spelarens rörelse
+                //stï¿½nga av spelarens rï¿½relse
                 playerMovementScript.enabled = false;
             }
             else if (closeUpActivated == true)
             {
                 kitharaCloseUp.SetActive(false);
                 closeUpActivated = false;
-                //stänga av spelarens rörelser
+                //stï¿½nga av spelarens rï¿½relser
                 playerMovementScript.enabled = true;
             }
         }
@@ -68,7 +72,7 @@ public class KitharaObject : MonoBehaviour
         }
     }
 
-    //public void triggerCloseUp() //för när kithara hade en knappkomponent
+    //public void triggerCloseUp() //fï¿½r nï¿½r kithara hade en knappkomponent
     //{
     //    Debug.Log("i am pressed!");
     //    if (kithara.activeSelf == false)

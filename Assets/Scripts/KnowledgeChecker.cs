@@ -1,3 +1,7 @@
+//Adin Farid, adfa8505
+//Linn Li, lili6794
+//Nora Wennerberg, nowe9092
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,12 +16,12 @@ public class KnowledgeChecker : MonoBehaviour
     [SerializeField] private Button button2;
     private bool hasAnswered = false;
     private bool answeredRight;
-    //private int totalCorrectAnswers = 0; //denna bortkommenterars rn för vi skiter för stunden i flera slut
+    //private int totalCorrectAnswers = 0; //denna bortkommenterars rn fï¿½r vi skiter fï¿½r stunden i flera slut
 
     void Start()
     {
-        questionParent.SetActive(false); // Gör texten osynlig
-        text.text = questionText; //Sätt texten till urspungliga
+        questionParent.SetActive(false); // Gï¿½r texten osynlig
+        text.text = questionText; //Sï¿½tt texten till urspungliga
         //Debug.Log("in start: " + totalCorrectAnswers);
     }
 
@@ -44,7 +48,7 @@ public class KnowledgeChecker : MonoBehaviour
                 //Debug.Log("text synlig");
             }
             
-            //texten sätts aktiv oavsett vad som står på den, ifall det är spelaren som går in
+            //texten sï¿½tts aktiv oavsett vad som stï¿½r pï¿½ den, ifall det ï¿½r spelaren som gï¿½r in
             questionParent.SetActive(true);
             //audioS.PlayOneShot(clip);
         }
@@ -55,7 +59,7 @@ public class KnowledgeChecker : MonoBehaviour
         if (collision.CompareTag("Player") == true)
         {
             questionParent.SetActive(false);
-            //Debug.Log("text försvinner");
+            //Debug.Log("text fï¿½rsvinner");
         }
     }
 
@@ -82,7 +86,7 @@ public class KnowledgeChecker : MonoBehaviour
         //Debug.Log("in answeredWrong: " + totalCorrectAnswers);
     }
 
-    //public int getTotalCorrectAnswers() //för i slutet, när man från ett annat script ska checka hur bra spelaren gjorde
+    //public int getTotalCorrectAnswers() //fï¿½r i slutet, nï¿½r man frï¿½n ett annat script ska checka hur bra spelaren gjorde
     //{
     //    return totalCorrectAnswers;
     //}

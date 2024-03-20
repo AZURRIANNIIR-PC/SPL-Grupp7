@@ -1,3 +1,7 @@
+//Adin Farid, adfa8505
+//Linn Li, lili6794
+//Nora Wennerberg, nowe9092
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +10,7 @@ public class EnemyHarmful : MonoBehaviour
 {
     public int damage = 2;
 
-    //spelaren skadas av att gå in i fienden
+    //spelaren skadas av att gï¿½ in i fienden
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") == true)

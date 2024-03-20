@@ -1,3 +1,7 @@
+//Adin Farid, adfa8505
+//Linn Li, lili6794
+//Nora Wennerberg, nowe9092
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,17 +40,17 @@ public class EnemyState : MonoBehaviour
     {
         Debug.Log("Enemy is dead!");
         animator.SetBool("IsDead", true);
-        rb.isKinematic = true; //stänger av rigidBody, annars kommer fienden falla genom världen när dens collider tas bort
+        rb.isKinematic = true; //stï¿½nger av rigidBody, annars kommer fienden falla genom vï¿½rlden nï¿½r dens collider tas bort
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponentInChildren<EnemyAttackTrigger>().enabled = false;
         //GetComponentInChildren<AttackArea>().enabled = false;
-        harmfulScript.enabled = false; //av ngn anledning funkar den här inte? man blir skadad ändå ifall man går in i fienden
+        harmfulScript.enabled = false; //av ngn anledning funkar den hï¿½r inte? man blir skadad ï¿½ndï¿½ ifall man gï¿½r in i fienden
         Invoke("DestroyGameObject", 1f);
 
-        //PlayerPrefs.SetInt("isDead", 1); //ifall död = 1, ifall levande = 0
+        //PlayerPrefs.SetInt("isDead", 1); //ifall dï¿½d = 1, ifall levande = 0
     }
 
-    private void DestroyGameObject() //om man vill att fiendens lik ska försvinna, ej ligga kvar
+    private void DestroyGameObject() //om man vill att fiendens lik ska fï¿½rsvinna, ej ligga kvar
     {
         Destroy(gameObject);
     }
