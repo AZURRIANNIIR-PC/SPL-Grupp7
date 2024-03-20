@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPoint : MonoBehaviour
-{
+public class CheckPoint : MonoBehaviour {
     [SerializeField] private Sprite checkPointUnlocked;
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") == true)
-        {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Player") == true) {
             collision.GetComponent<PlayerState>().ChangeRespawnPosition(gameObject);
 
-            //spara namnet på restartPositionen
+            //spara namnet pï¿½ restartPositionen
             SaveGame.SaveRespawnPosition(gameObject.name);
             Debug.Log(name + "is saved");
 

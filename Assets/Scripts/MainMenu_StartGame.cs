@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu_StartGame : MonoBehaviour {
     [SerializeField] private Player_Movement playerMovement;
+    [SerializeField] private NextLevel nextLevel;
 
-    public void StartGame() {
+    private void StartGame() {
         playerMovement.enabled = true;
-        SceneManager.LoadScene(1);
+        nextLevel.LoadCorrectLevel();
+        //SceneManager.LoadScene(1);
 
         //playerMovement.SetIsAtEnd(true);
     }

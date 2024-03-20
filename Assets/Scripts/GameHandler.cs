@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GameHandler : MonoBehaviour
 {
+    [SerializeField] private SaveGame saveGame;
     private void Start()
     {
         // Load the saved respawn position
-        string respawnName = SaveGame.LoadRespawnPosition();
+        //string respawnName = SaveGame.LoadRespawnPosition();
+        string respawnName = saveGame.GetKey();
 
         // Debug: Check if respawnName is correctly loaded
         Debug.Log("Loaded respawn name: " + respawnName);

@@ -14,18 +14,25 @@ public class SaveGame : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public static string LoadRespawnPosition()
+    public static void LoadRespawnPosition()
     {
         if (PlayerPrefs.HasKey(RESPAWN_POSITION_KEY))
         {
-            return PlayerPrefs.GetString(RESPAWN_POSITION_KEY);
-            Debug.Log("Restartposition is" + RESPAWN_POSITION_KEY + ",not empty");
-        }
-        else
-        {
-            // om respawnPosition inte sparas kommer start positionen anv‰ndas
-            return "";
-        }
+            PlayerPrefs.GetString(RESPAWN_POSITION_KEY);
+            //Debug.Log("Restartposition is" + RESPAWN_POSITION_KEY + ",not empty");
+            Debug.Log("LoadRespawnPosition method");
+        } 
+        //else
+        //{
+        //    // om respawnPosition inte sparas kommer start positionen anv√§ndas
+        //    return "";
+        //    Debug.Log(PlayerPrefs.GetString(RESPAWN_POSITION_KEY));
+        //}
+    }
+
+    public string GetKey() {
+        Debug.Log(RESPAWN_POSITION_KEY);
+        return PlayerPrefs.GetString(RESPAWN_POSITION_KEY);
     }
 
     public static void SavePlayerSpriteIndex(int spriteIndex)
@@ -43,6 +50,4 @@ public class SaveGame : MonoBehaviour
     {
         PlayerPrefs.DeleteKey(RESPAWN_POSITION_KEY);
     }
-
 }
-

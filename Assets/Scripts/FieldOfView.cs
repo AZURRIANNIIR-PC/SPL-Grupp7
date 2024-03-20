@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldOfView : MonoBehaviour
-{
+public class FieldOfView : MonoBehaviour {
    [SerializeField] private LayerMask layerMask;
    private Mesh mesh;
    private float fieldOfView;
@@ -15,8 +14,7 @@ public class FieldOfView : MonoBehaviour
    //public Respawn respawn;
     public PlayerState playerState;
 
-    private void Start()
-    {
+    private void Start() {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         fieldOfView = 12f; // ocks� ett v�rde f�r field of view som kan justeras, beh�vde flytta upp f�r att andra metoder ska funka
@@ -27,14 +25,13 @@ public class FieldOfView : MonoBehaviour
         // Get the Respawn component attached to the player
        // respawn = FindObjectOfType<Respawn>();
         //if (respawn == null)
-        {
-            //Debug.LogError("Respawn component not found!");
-        }
+        //{
+        //    //Debug.LogError("Respawn component not found!");
+        //}
 
     }
 
-    private void Update()
-    { 
+    private void Update() { 
         //v�rden f�r field of view
         int rayCount = 50;
         float angle = startingAngle;
@@ -57,33 +54,24 @@ public class FieldOfView : MonoBehaviour
         // g� igenom alla rays och l�gg placera vertiser p� r�tt position
         int vertexIndex = 1;
         int triangleIndex = 0;
-        for (int i = 0; i <= rayCount; i++)
-        {
+        for (int i = 0; i <= rayCount; i++) {
             Vector3 vertex;
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
             // If-satsen kollar efter kollisioner mellan synf�tet och omv�rlden, och anpassar synf�tet utefter detta
 
             //döda spelaren vid kontakt med rays
-            if (raycastHit2D.collider != null && raycastHit2D.collider.CompareTag("Player"))
-            {
+            if (raycastHit2D.collider != null && raycastHit2D.collider.CompareTag("Player")) {
                 //playerState.doHarm(damage);
                 //Debug.Log("Player detected in field of view!");
                 KillPlayer();
             }
             
-            
-
-
-
-
             // kolla vad raycasten tr�ffar f�r debug
-            if (raycastHit2D.collider != null)
-            {
+            if (raycastHit2D.collider != null) {
                 //Debug.Log("Ray hit: " + raycastHit2D.collider.gameObject.name + " at position: " + raycastHit2D.point);
             }
 
-            if (raycastHit2D.collider == null)
-            {
+            if (raycastHit2D.collider == null) {
                 // om det inte tr�ffar n�got s�tts vertisen d�r den va p� maximala distansen
                 vertex = origin + GetVectorFromAngle(angle) * viewDistance;
             } else {
@@ -93,8 +81,7 @@ public class FieldOfView : MonoBehaviour
             vertices[vertexIndex] = vertex;
 
             //detta kommer skapa triangeln baserat p� vertiserna, om  i > 0, f�r att detta inte kan k�ras p� den f�rsta ray:n d� den inte han en vertis att koppla till
-            if (i > 0)
-            {
+            if (i > 0) {
                 triangles[triangleIndex + 0] = 0; // vertisen p� origin
                 triangles[triangleIndex + 1] = vertexIndex - 1; // vertisen innan
                 triangles[triangleIndex + 2] = vertexIndex; // den nuvarande vertisen
@@ -126,23 +113,18 @@ public class FieldOfView : MonoBehaviour
     }
 
     // Metod f�r att s�tta rotationsv�rdet och riktning
-    public void SetRotationAngle(float angle)
-    {
+    public void SetRotationAngle(float angle) {
         startingAngle = angle + 180f;
     }
 
-
-
-static Vector3 GetVectorFromAngle(float angle)
-    {
+    static Vector3 GetVectorFromAngle(float angle) {
         float angleRad = angle * (Mathf.PI / 180f);
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
 
     }
 
     //f�ljande tar en vector3 och returnerar en float
-    static float GetAngleFromVectorFloat(Vector3 direction)
-    {
+    static float GetAngleFromVectorFloat(Vector3 direction) {
         direction = direction.normalized;
         float n = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (n < 0) n += 360;
@@ -150,23 +132,18 @@ static Vector3 GetVectorFromAngle(float angle)
     }
 
     // set origin med den vertikala ofsetten inräknad så den inte missar vissa obstacles i banan
-    public void SetOrigin(Vector3 origin)
-    {
+    public void SetOrigin(Vector3 origin) {
         this.origin = origin + Vector3.up * verticalOffset;
     }
-    public void SetAimDirection(Vector3 aimDirection)
-    {
+
+    public void SetAimDirection(Vector3 aimDirection) {
         startingAngle = GetAngleFromVectorFloat(aimDirection) - fieldOfView / 2f;
     }
 
-    public void KillPlayer()
-    {
+    public void KillPlayer() {
         PlayerState playerState = FindObjectOfType<PlayerState>();
-        if (playerState != null)
-        {
+        if (playerState != null) {
             playerState.Respawn();
         }
-        
     }
-
 }
