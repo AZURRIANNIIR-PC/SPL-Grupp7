@@ -44,8 +44,26 @@ public class PlayerState : MonoBehaviour {
         animator.SetBool("IsDead", false);
     }
 
-    public void ChangeRespawnPosition(GameObject newRespawnPosition) {
+    //public void ChangeRespawnPosition(GameObject newRespawnPosition) {
+    //    respawnPosition = newRespawnPosition;
+    //}
+
+    public void ChangeRespawnPosition(GameObject newRespawnPosition)
+    {
         respawnPosition = newRespawnPosition;
+
+        Debug.Log("Respawn position set to: " + respawnPosition);
+
+        // Update the player's position immediately after setting the respawn position
+        if (respawnPosition != null)
+        {
+            transform.position = respawnPosition.transform.position;
+            Debug.Log("Player position set to respawn position: " + respawnPosition.transform.position);
+        }
+        else
+        {
+            Debug.LogWarning("Respawn position is null!");
+        }
     }
 
     public void FoodPickup() {
