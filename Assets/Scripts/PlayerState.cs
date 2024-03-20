@@ -11,12 +11,14 @@ public class PlayerState : MonoBehaviour {
     //private bool isDead = false;
 
     public GameObject respawnPosition;
+    
 
     // Start is called before the first frame update
     void Start() {
         healthPoints = initialHealthPoints;
 
         animator = gameObject.GetComponent<Animator>();
+        
     }
 
     public void doHarm(int doDamageByThisMuch) {
@@ -38,7 +40,7 @@ public class PlayerState : MonoBehaviour {
         //}
     }
 
-    private void Respawn() {
+    public void Respawn() {
         healthPoints = initialHealthPoints;
         gameObject.transform.position = respawnPosition.transform.position;
         animator.SetBool("IsDead", false);
@@ -46,7 +48,21 @@ public class PlayerState : MonoBehaviour {
 
     public void ChangeRespawnPosition(GameObject newRespawnPosition) {
         respawnPosition = newRespawnPosition;
+
+        Debug.Log("Respawn position set to: " + respawnPosition);
+
+        // Update the player's position immediately after setting the respawn position
+        if (respawnPosition != null)
+        {
+            transform.position = respawnPosition.transform.position;
+            Debug.Log("Player position set to respawn position: " + respawnPosition.transform.position);
+        }
+        else
+        {
+            Debug.LogWarning("Respawn position is null!");
+        }
     }
+
 
     public void FoodPickup() {
         foodAmount++;
