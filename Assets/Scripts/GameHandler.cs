@@ -5,8 +5,17 @@ using UnityEngine;
 public class GameHandler : MonoBehaviour
 {
     [SerializeField] private SaveGame saveGame;
-    private void Start()
-    {
+    public static bool isFirstLoad = true;
+    [SerializeField] private PlayerState playerState;
+    [SerializeField] private GameObject OGRespawn;
+
+    private void Start() {
+        if (isFirstLoad) {
+            // Set respawn position to the beginning
+            //SaveGame.SaveRespawnPosition("StartingPosition");
+            saveGame.DeleteSavedPlayerPosition();
+            isFirstLoad = false;
+        }
         // Load the saved respawn position
         //string respawnName = SaveGame.LoadRespawnPosition();
         string respawnName = saveGame.GetKey();
@@ -39,6 +48,7 @@ public class GameHandler : MonoBehaviour
         else
         {
             Debug.LogWarning("Saved respawn position not found!");
+            playerState.ChangeRespawnPosition(OGRespawn);
         }
     }
 }

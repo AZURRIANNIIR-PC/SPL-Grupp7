@@ -22,6 +22,7 @@ public class NextLevel : MonoBehaviour {
     public void LoadCorrectLevel() {
         //string savedRespawnPosition = SaveGame.LoadRespawnPosition();
         string savedRespawnPosition = saveGame.GetKey();
+        Debug.Log("Saved respawn position: " + (savedRespawnPosition?.Length > 0 ? savedRespawnPosition : "null"));
 
         if (Scene2RestartPositions.Contains(savedRespawnPosition)) { //Omd en inte har checkpoints sparade från lvl 2
             //Debug.Log("savedRespawnPosition is" + savedRespawnPosition);
@@ -32,8 +33,6 @@ public class NextLevel : MonoBehaviour {
             SceneManager.LoadScene(1);
         }
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player") == true) {
